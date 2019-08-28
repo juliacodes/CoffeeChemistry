@@ -4,6 +4,7 @@
     <title><!-- insert title --></title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/master.css" />
+    <script type="text/javascript" src="master.js"></script>
     <link
       href="https://fonts.googleapis.com/css?family=Muli:300,400,700&display=swap"
       rel="stylesheet"
@@ -13,10 +14,22 @@
   <body>
     <main>
       <div class="Landing">
-        <div class="Center">
+        <div id="Start" class="Center active">
             <div class="Logo"></div>
             <p class="Description">&#8226; &nbsp; brew your perfect cup &nbsp;&#8226;</p>
-            <button class="Standard">Begin</button>
+            <button onclick = "Continue()" class="Standard">Begin</button>
+        </div>
+        <div id="Step1" class="Center inactive">
+          <h1>Step1</h1>
+          <button onclick = "Continue()" class="Standard noAnim">Next</button>
+        </div>
+        <div id="Step2" class="Center inactive">
+          <h1>Step2</h1>
+          <button onclick = "Continue()" class="Standard noAnim">Next</button>
+        </div>
+        <div id="Step3" class="Center inactive">
+          <h1>Step3</h1>
+          <button onclick = "Continue()" class="Standard noAnim">Next</button>
         </div>
       </div>
       <span class="Animate-In"/>
