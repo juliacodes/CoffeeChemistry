@@ -12,6 +12,7 @@
   </head>
 
   <body>
+    <header id="Header" class="inactive"><div class="LogoHeading"></div></header>
     <main>
       <div class="Landing">
         <div id="Start" class="Center active">
@@ -20,16 +21,40 @@
             <button onclick = "Continue()" class="Standard">Begin</button>
         </div>
         <div id="Step1" class="Center inactive">
-          <h1>Step1</h1>
+          <div class="Form-Container">
+            <h1>What's your brewing method?</h1>
+            <div class="Flex-Container">
+              <div class="Option"></div>
+              <div class="Option"></div>
+              <div class="Option"></div>
+              <div class="Option"></div>
+            </div>
+          </div>
           <button onclick = "Continue()" class="Standard noAnim">Next</button>
         </div>
         <div id="Step2" class="Center inactive">
-          <h1>Step2</h1>
-          <button onclick = "Continue()" class="Standard noAnim">Next</button>
+          <div class="Form-Container">
+            <h1>How many cups are you making?</h1>
+              <div class="Flex-Container">
+                <div class="Option"></div>
+                <div class="Option"></div>
+                <div class="Option"></div>
+                <div class="Option"></div>
+              </div>
+          </div>
+          <button onclick = "Continue()" class="Standard noAnim">Next</>
         </div>
         <div id="Step3" class="Center inactive">
-          <h1>Step3</h1>
-          <button onclick = "Continue()" class="Standard noAnim">Next</button>
+          <div class="Form-Container">
+            <h1>How strong do you like your coffee?</h1>
+            <div class="Flex-Container">
+              <div class="Option"></div>
+              <div class="Option"></div>
+              <div class="Option"></div>
+              <div class="Option"></div>
+            </div>
+          </div>
+          <button onclick = "Continue()" class="Standard noAnim">Complete</button>
         </div>
       </div>
       <span class="Animate-In"/>

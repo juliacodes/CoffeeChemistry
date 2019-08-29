@@ -1,9 +1,16 @@
 function Continue() {
   // display content of first part of form
+  let header = document.getElementById("Header");
   let start = document.getElementById("Start");
   let step1 = document.getElementById("Step1");
   let step2 = document.getElementById("Step2");
   let step3 = document.getElementById("Step3");
+
+  if (header.className === "inactive") {
+    header.classList.add("active");
+    header.classList.remove("inactive");
+  } else {
+  }
 
   if (start.className === "Center active") {
     start.classList.add("inactive");
