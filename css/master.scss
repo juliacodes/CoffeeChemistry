@@ -39,7 +39,15 @@ h1 {
   line-height: 150%;
   margin-bottom: 20px;
   @media only screen and (min-width: 959px) {
-    margin-bottom: 90px;
+    margin-bottom: 50px;
+  }
+
+  a {
+    padding-top: 50px;
+    color: black;
+    text-decoration: none;
+    overflow: visible;
+    border-bottom: 1px solid black;
   }
 }
 
@@ -117,6 +125,7 @@ main {
     width: 80%;
     height: 100%;
     margin: 0 auto;
+    max-width: 1200px;
 
     transform: translateY(-50px);
   }
@@ -278,7 +287,7 @@ main {
     @media only screen and (min-width: 959px) {
       width: auto;
       max-width: unset;
-      max-height: 15vw;
+      max-height: 100%;
     }
   }
 
@@ -475,6 +484,94 @@ footer {
       margin-top: 30px;
       text-align: center;
     }
+  }
+}
+
+.results {
+  padding: 30px;
+  width: 80%;
+  margin-top: 0;
+  padding-top: 140px;
+  padding-bottom: 0;
+
+  @media only screen and (min-width: 959px) {
+    margin-top: 20px;
+    height: 50vh;
+    padding: 30px 0 0 0;
+  }
+}
+
+.results-flex {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.result {
+  width: 30%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+
+  .result-image {
+    width: 100%;
+    height: 70px;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    @media only screen and (min-width: 959px) {
+      height: 130px;
+    }
+  }
+
+  p {
+    padding: 20px 0 0 0;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.1em;
+
+    @media only screen and (min-width: 959px) {
+      padding: 30px 0 0 0;
+      font-size: 35px;
+    }
+  }
+
+  alt {
+    padding: 10px 0 0 0;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 150%;
+    color: #787676;
+    text-align: center;
+    letter-spacing: 0.1em;
+
+    @media only screen and (min-width: 959px) {
+      padding: 30px 0 0 0;
+      font-size: 15px;
+    }
+  }
+}
+
+.water {
+  .result-image {
+    background-image: url("../images/water.jpg");
+  }
+}
+
+.grind {
+  .result-image {
+    background-image: url("../images/grind.jpg");
+  }
+}
+
+.coffee {
+  .result-image {
+    background-image: url("../images/coffee.jpg");
   }
 }
 

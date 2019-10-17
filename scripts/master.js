@@ -5,6 +5,8 @@ function Continue() {
   let step1 = document.getElementById("Step1");
   let step2 = document.getElementById("Step2");
   let step3 = document.getElementById("Step3");
+  let step4 = document.getElementById("Step4");
+
   let footer = document.getElementById("stage");
 
   if (header.className === "inactive") {
@@ -28,6 +30,12 @@ function Continue() {
     step3.classList.add("active");
     step3.classList.remove("inactive");
     footer.style.width = "99%";
+  } else if (step3.className === "Center active") {
+    step3.classList.add("inactive");
+    step4.classList.add("active");
+    step4.classList.remove("inactive");
+    footer.style.backgroundColor = "white";
+    footer.style.width = "100%";
   }
   // clear previous saved data
   return;

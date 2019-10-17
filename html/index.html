@@ -65,19 +65,28 @@
           </div>
           <button onclick = "Continue()" class="Standard noAnim end">Complete</button>
         </div>
-        <div id="Step3" class="Center inactive">
+        <div id="Step4" class="Center inactive">
             <div class="Form-Container">
-              <h1>How strong do you like your coffee?</h1>
-              <div class="Flex-Container strength">
-  
-                <input type="range" min="1" max="5" step="1" list="ticks">
-                <datalist id="ticks">
-                    <option>Weak</option>
-                    <option>Medium Weak</option>
-                    <option>&nbsp; Medium</option>
-                    <option>Medium Strong</option>
-                    <option> Strong</option>
-                </datalist>
+              <div class="Flex-Container strength results">
+                <h1>Your Brewing Instructions:</h1>
+                <div class="results-flex">
+                  <div class="result water">
+                    <div class="result-image"></div>
+                    <p>300g</p>
+                    <alt>WATER</alt>
+                  </div>
+                  <div class="result grind">
+                    <div class="result-image"></div>
+                    <p>Medium</p>
+                    <alt>GRIND</alt>
+                  </div>
+                  <div class="result coffee">
+                    <div class="result-image"></div>
+                    <p>300g</p>
+                    <alt>COFFEE</alt>
+                  </div>
+                </div>
+                <h1><a href="">New to this? Read Brewing Instructions <span>›</span></a></h1>
               </div>
             </div>
             <button onclick = "Continue()" class="Standard noAnim end">Complete</button>
