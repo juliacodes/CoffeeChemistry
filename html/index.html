@@ -31,6 +31,7 @@
             </div>
           </div>
           <button id="continue" onclick = "Continue()" class="Standard noAnim">Next</button>
+          <p id="emptySelection-type"></p>
         </div>
         <div id="Step2" class="Center inactive">
           <div class="Form-Container">
@@ -41,25 +42,27 @@
                 <div class="Option cups" id="3" >3 Cups</div>
                 <div id="custom" class="Option cups cupsmore">
                   <p class="form-count-p">Enter Custom</p>
-                  <input type="number" class="form-input"></input>
+                  <input id="input" name="input" type="number" class="form-input"></input>
                 </div>
               </div>
           </div>
           
-          <button id="continue2" onclick = "Continue()" class="Standard noAnim">Next</>
+          <button id="continue2" onclick = "Continue()" class="Standard noAnim">Next</button>
+          <p id="emptySelection-count"></p>
+
         </div>
         <div id="Step3" class="Center inactive">
           <div class="Form-Container">
             <h1>How strong do you like your coffee?</h1>
             <div class="Flex-Container strength">
 
-              <input type="range" min="1" max="5" step="1" list="ticks">
+              <input id="CoffeeStrength" type="range" min="1" max="5" step="1" list="ticks">
               <datalist id="ticks">
-                  <option>Weak</option>
-                  <option>Medium Weak</option>
-                  <option>&nbsp; Medium</option>
-                  <option>Medium Strong</option>
-                  <option> Strong</option>
+                  <option id="weak">Weak</option>
+                  <option id="medWeak">Medium Weak</option>
+                  <option id="med">&nbsp; Medium</option>
+                  <option id="medStrong">Medium Strong</option>
+                  <option id="strong"> Strong</option>
               </datalist>
             </div>
           </div>
@@ -86,10 +89,10 @@
                     <alt>COFFEE</alt>
                   </div>
                 </div>
-                <h1><a href="">New to this? Read Brewing Instructions <span>›</span></a></h1>
+                <h1 class="instructions"><a href="">New to this? Read Brewing Instructions <span>›</span></a></h1>
               </div>
             </div>
-            <button onclick = "Continue()" class="Standard noAnim end">Complete</button>
+            <button onclick = "Restart()" class="Standard noAnim end">New Brew</button>
           </div>
       </div>
       <span class="Animate-In"/>

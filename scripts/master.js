@@ -21,21 +21,58 @@ function Continue() {
     step1.classList.remove("inactive");
     footer.style.width = "33%";
   } else if (step1.className === "Center active") {
-    step1.classList.add("inactive");
-    step2.classList.add("active");
-    step2.classList.remove("inactive");
-    footer.style.width = "66%";
+    if (document.querySelector("#options div.selected") == null) {
+      document.getElementById("emptySelection-type").innerHTML =
+        "Please select an option";
+    } else {
+      step1.classList.add("inactive");
+      step2.classList.add("active");
+      step2.classList.remove("inactive");
+      footer.style.width = "66%";
+
+      let CoffeeTypeClass = document.querySelector("#options div.selected");
+      let CoffeeTypeInput = CoffeeTypeClass.id;
+      localStorage.setItem("CoffeeTypeInput", CoffeeTypeInput);
+      console.log(localStorage.getItem("CoffeeTypeInput"));
+    }
   } else if (step2.className === "Center active") {
-    step2.classList.add("inactive");
-    step3.classList.add("active");
-    step3.classList.remove("inactive");
-    footer.style.width = "99%";
+    if (
+      document.querySelector("#options div.cups.selected") == null &&
+      document.querySelector("input").value == ""
+    ) {
+      document.getElementById("emptySelection-count").innerHTML =
+        "Please select an option";
+    } else if (document.querySelector("input").value !== "") {
+      step2.classList.add("inactive");
+      step3.classList.add("active");
+      step3.classList.remove("inactive");
+      footer.style.width = "99%";
+
+      localStorage.setItem("CoffeeAmountInput", input.value);
+      console.log(localStorage.getItem("CoffeeAmountInput"));
+    } else {
+      step2.classList.add("inactive");
+      step3.classList.add("active");
+      step3.classList.remove("inactive");
+      footer.style.width = "99%";
+
+      let CoffeeAmountClass = document.querySelector(
+        "#options div.cups.selected"
+      );
+      let CoffeeAmountInput = CoffeeAmountClass.id;
+      localStorage.setItem("CoffeeAmountInput", CoffeeAmountInput);
+      console.log(localStorage.getItem("CoffeeAmountInput"));
+    }
   } else if (step3.className === "Center active") {
     step3.classList.add("inactive");
     step4.classList.add("active");
     step4.classList.remove("inactive");
     footer.style.backgroundColor = "white";
     footer.style.width = "100%";
+
+    let rangeSlider = document.getElementById("CoffeeStrength").value;
+
+    console.log(rangeSlider);
   }
   // clear previous saved data
   return;

@@ -404,9 +404,9 @@ footer {
 .results {
   padding: 30px;
   width: 80%;
-  margin-top: 0;
-  padding-top: 140px;
-  padding-bottom: 0; }
+  margin-top: 40px;
+  padding-top: 30px;
+  padding-bottom: 30px; }
   @media only screen and (min-width: 959px) {
     .results {
       margin-top: 20px;
@@ -418,11 +418,15 @@ footer {
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px; }
+  margin-bot: 40px; }
+  @media only screen and (min-width: 959px) {
+    .results-flex {
+      margin: 0px 0 40px 0; } }
 
 .result {
   width: 30%;
-  height: 300px;
+  height: unset;
+  margin: 40px 0;
   display: flex;
   flex-direction: column; }
   .result .result-image {

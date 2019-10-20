@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "live-server": "^1.2.1",
-    "node-sass": "^4.12.0"
+    "node-sass": "^4.12.0",
+    "sass": "^1.23.0"
   },
   "scripts": {
     "compile:sass": "node-sass css/master.scss css/master.css -w"
