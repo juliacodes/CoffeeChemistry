@@ -55,7 +55,6 @@ function Continue() {
       step3.classList.add("active");
       step3.classList.remove("inactive");
       footer.style.width = "99%";
-
       let CoffeeAmountClass = document.querySelector(
         "#options div.cups.selected"
       );
@@ -71,8 +70,46 @@ function Continue() {
     footer.style.width = "100%";
 
     let rangeSlider = document.getElementById("CoffeeStrength").value;
+    let strength = 17;
+    if (document.getElementById("CoffeeStrength").value == 1) {
+      strength = 19;
+      localStorage.setItem("CoffeeStrength", strength);
+    } else if (document.getElementById("CoffeeStrength").value == 2) {
+      strength = 18;
+      localStorage.setItem("CoffeeStrength", strength);
+    } else if (document.getElementById("CoffeeStrength").value == 3) {
+      strength = 17;
+      localStorage.setItem("CoffeeStrength", strength);
+    } else if (document.getElementById("CoffeeStrength").value == 4) {
+      strength = 16;
+      localStorage.setItem("CoffeeStrength", strength);
+    } else if (document.getElementById("CoffeeStrength").value == 5) {
+      strength = 15;
+      localStorage.setItem("CoffeeStrength", strength);
+    }
 
-    console.log(rangeSlider);
+    let grindType = "Medium";
+    let CoffeeType = localStorage.getItem("CoffeeTypeInput");
+    if (CoffeeType === "drip") {
+      grindType = "Medium";
+      localStorage.setItem("grindType", "medium");
+    } else if (CoffeeType === "chemex") {
+      grindType = "Medium-Coarse";
+      localStorage.setItem("grindType", "medium-coarse");
+    } else if (CoffeeType === "french") {
+      grindType = "Coarse";
+      localStorage.setItem("grindType", "coarse");
+    } else if (CoffeeType === "espresso") {
+      grindType = "Fine";
+      localStorage.setItem("grindType", "fine");
+    }
+
+    let waterCount = localStorage.getItem("CoffeeAmountInput") * 250;
+    let coffeeCount = Math.round(waterCount / strength);
+
+    document.getElementById("water-count").innerHTML = waterCount + "g";
+    document.getElementById("grind-level").innerHTML = grindType;
+    document.getElementById("coffee-count").innerHTML = coffeeCount + "g";
   }
   // clear previous saved data
   return;
@@ -122,5 +159,89 @@ function CupChoice(event) {
   if (event.target.className !== "form-input") {
     event.target.className = "Option cups selected";
     button1.style.backgroundColor = "#e05e33";
+    document.querySelector("input").value = "";
+  }
+}
+
+function WaterUnit(id) {
+  let currentlySelected = document.querySelector(".button-selected-water");
+  let newSelected = document.getElementById(id);
+  if (currentlySelected.id !== id) {
+    currentlySelected.classList.remove("button-selected-water");
+    if (id === "wat-oz") {
+      newSelected.classList.add("button-selected-water");
+      let waterUnit = Math.round(
+        (localStorage.getItem("CoffeeAmountInput") * 250) / 28.35
+      );
+      document.getElementById("water-count").innerHTML = waterUnit + " oz";
+    } else if (id == "wat-ml") {
+      newSelected.classList.add("button-selected-water");
+      let waterUnit = Math.round(
+        localStorage.getItem("CoffeeAmountInput") * 250
+      );
+      document.getElementById("water-count").innerHTML = waterUnit + " ml";
+    } else if (id == "wat-g") {
+      newSelected.classList.add("button-selected-water");
+      let waterUnit = Math.round(
+        localStorage.getItem("CoffeeAmountInput") * 250
+      );
+      document.getElementById("water-count").innerHTML = waterUnit + "g";
+    }
+  }
+}
+
+function CoffeeUnit(id) {
+  let currentlySelected = document.querySelector(".button-selected-coffee");
+  let newSelected = document.getElementById(id);
+
+  let waterCount = localStorage.getItem("CoffeeAmountInput") * 250;
+  let strength = localStorage.getItem("CoffeeStrength");
+  let coffeeCount = Math.round(waterCount / strength);
+
+  if (currentlySelected.id !== id) {
+    currentlySelected.classList.remove("button-selected-coffee");
+    if (id === "cof-oz") {
+      newSelected.classList.add("button-selected-coffee");
+      let coffeeUnitNew = coffeeCount / 28.35;
+      document.getElementById("coffee-count").innerHTML =
+        coffeeUnitNew.toFixed(2) + " oz";
+    } else if (id == "cof-tbs") {
+      newSelected.classList.add("button-selected-coffee");
+      let coffeeUnitNew = coffeeCount / 12.781700527271772;
+      document.getElementById("coffee-count").innerHTML =
+        coffeeUnitNew.toFixed(1) + " tbs";
+    } else if (id == "cof-g") {
+      newSelected.classList.add("button-selected-coffee");
+      let coffeeUnitNew = Math.round(coffeeCount);
+      document.getElementById("coffee-count").innerHTML = coffeeUnitNew + "g";
+    }
+  }
+}
+
+function GrindUnit(id) {
+  let currentlySelected = document.querySelector(".button-selected-grind");
+  let newSelected = document.getElementById(id);
+  let grindUnit = localStorage.getItem("grindType");
+  let newGrindUnit = 0;
+
+  if (grindUnit === "coarse") {
+    newGrindUnit = "1 - 2";
+  } else if (grindUnit === "fine") {
+    newGrindUnit = "9 - 10";
+  } else if (grindUnit === "medium-coarse") {
+    newGrindUnit = "6 - 7";
+  } else if (grindUnit === "medium") {
+    newGrindUnit = "4 - 5";
+  }
+
+  if (currentlySelected.id !== id) {
+    currentlySelected.classList.remove("button-selected-grind");
+    if (id === "num") {
+      newSelected.classList.add("button-selected-grind");
+      document.getElementById("grind-level").innerHTML = newGrindUnit;
+    } else if (id == "des") {
+      newSelected.classList.add("button-selected-grind");
+      document.getElementById("grind-level").innerHTML = grindUnit;
+    }
   }
 }

@@ -75,17 +75,32 @@
                 <div class="results-flex">
                   <div class="result water">
                     <div class="result-image"></div>
-                    <p>300g</p>
+                    <p id="water-count">300g</p>
+                    <div class="button-container">
+                        <button id="wat-oz" onclick="WaterUnit(id)">Oz</button>
+                        <button id="wat-g" onclick="WaterUnit(id)" class="button-selected-water">G</button>
+                        <button id="wat-ml" onclick="WaterUnit(id)">Ml</button>
+                      </div>
                     <alt>WATER</alt>
                   </div>
                   <div class="result grind">
                     <div class="result-image"></div>
-                    <p>Medium</p>
+                    <p id="grind-level">Medium</p>
+                    <div class="button-container">
+                        <button id="num" onclick="GrindUnit(id)">Num</button>
+                        <button id="des" class="button-selected-grind" onclick="GrindUnit(id)">Des</button>
+                      </div>
                     <alt>GRIND</alt>
                   </div>
                   <div class="result coffee">
                     <div class="result-image"></div>
-                    <p>300g</p>
+                    <p id="coffee-count">300g</p>
+                    <div class="button-container">
+                      <button id="cof-oz" onclick="CoffeeUnit(id)">Oz</button>
+                      <button id="cof-g" class="button-selected-coffee" onclick="CoffeeUnit(id)">G</button>
+                      <button id="cof-tbs" onclick="CoffeeUnit(id)">Tbs</button>
+                    </div>
+                    
                     <alt>COFFEE</alt>
                   </div>
                 </div>
