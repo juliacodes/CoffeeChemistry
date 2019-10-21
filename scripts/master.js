@@ -1,76 +1,78 @@
 function Continue() {
-  // display content of first part of form
+  // sets current stage for application
   let header = document.getElementById("Header");
   let start = document.getElementById("Start");
   let step1 = document.getElementById("Step1");
   let step2 = document.getElementById("Step2");
   let step3 = document.getElementById("Step3");
   let step4 = document.getElementById("Step4");
-
   let footer = document.getElementById("stage");
+  let emptySelection = document.getElementById("empty-selection-type");
 
   if (header.className === "inactive") {
+    // active header
     header.classList.add("active");
     header.classList.remove("inactive");
-  } else {
   }
 
   if (start.className === "Center active") {
+    // landing page
     start.classList.add("inactive");
     step1.classList.add("active");
     step1.classList.remove("inactive");
     footer.style.width = "33%";
   } else if (step1.className === "Center active") {
+    // coffee type choice page
     if (document.querySelector("#options div.selected") == null) {
-      document.getElementById("emptySelection-type").innerHTML =
-        "Please select an option";
+      emptySelection.innerHTML = "Please select an option";
     } else {
+      let CoffeeTypeClass = document.querySelector("#options div.selected");
+      let CoffeeTypeInput = CoffeeTypeClass.id;
+
       step1.classList.add("inactive");
       step2.classList.add("active");
       step2.classList.remove("inactive");
       footer.style.width = "66%";
-
-      let CoffeeTypeClass = document.querySelector("#options div.selected");
-      let CoffeeTypeInput = CoffeeTypeClass.id;
       localStorage.setItem("CoffeeTypeInput", CoffeeTypeInput);
-      console.log(localStorage.getItem("CoffeeTypeInput"));
     }
   } else if (step2.className === "Center active") {
+    // coffee amount choice page
     if (
       document.querySelector("#options div.cups.selected") == null &&
       document.querySelector("input").value == ""
     ) {
-      document.getElementById("emptySelection-count").innerHTML =
-        "Please select an option";
+      emptySelection.innerHTML = "Please select an option";
     } else if (document.querySelector("input").value !== "") {
       step2.classList.add("inactive");
       step3.classList.add("active");
       step3.classList.remove("inactive");
       footer.style.width = "99%";
-
       localStorage.setItem("CoffeeAmountInput", input.value);
-      console.log(localStorage.getItem("CoffeeAmountInput"));
     } else {
-      step2.classList.add("inactive");
-      step3.classList.add("active");
-      step3.classList.remove("inactive");
-      footer.style.width = "99%";
       let CoffeeAmountClass = document.querySelector(
         "#options div.cups.selected"
       );
       let CoffeeAmountInput = CoffeeAmountClass.id;
+
+      step2.classList.add("inactive");
+      step3.classList.add("active");
+      step3.classList.remove("inactive");
+      footer.style.width = "99%";
       localStorage.setItem("CoffeeAmountInput", CoffeeAmountInput);
-      console.log(localStorage.getItem("CoffeeAmountInput"));
     }
   } else if (step3.className === "Center active") {
+    // coffee strength page
+    let strength = 17;
+    let grindType = "Medium";
+    let CoffeeType = localStorage.getItem("CoffeeTypeInput");
+
     step3.classList.add("inactive");
     step4.classList.add("active");
     step4.classList.remove("inactive");
     footer.style.backgroundColor = "white";
     footer.style.width = "100%";
 
-    let rangeSlider = document.getElementById("CoffeeStrength").value;
-    let strength = 17;
+    // setting coffee strength level
     if (document.getElementById("CoffeeStrength").value == 1) {
       strength = 19;
       localStorage.setItem("CoffeeStrength", strength);
@@ -88,8 +90,7 @@ function Continue() {
       localStorage.setItem("CoffeeStrength", strength);
     }
 
-    let grindType = "Medium";
-    let CoffeeType = localStorage.getItem("CoffeeTypeInput");
+    // setting coffee type
     if (CoffeeType === "drip") {
       grindType = "Medium";
       localStorage.setItem("grindType", "medium");
@@ -104,18 +105,21 @@ function Continue() {
       localStorage.setItem("grindType", "fine");
     }
 
+    // sets displayed water amount
     let waterCount = localStorage.getItem("CoffeeAmountInput") * 250;
+
+    // sets displayed coffee amount
     let coffeeCount = Math.round(waterCount / strength);
 
     document.getElementById("water-count").innerHTML = waterCount + "g";
     document.getElementById("grind-level").innerHTML = grindType;
     document.getElementById("coffee-count").innerHTML = coffeeCount + "g";
   }
-  // clear previous saved data
   return;
 }
 
 function Restart() {
+  // Restart function runs when clicking "brew again" or the logo at the top
   var els = document.querySelectorAll(".Center.active");
   let header = document.getElementById("Header");
   let start = document.getElementById("Start");
@@ -126,6 +130,7 @@ function Restart() {
     els[i].classList.add("inactive");
   }
 
+  // removes the header when on the starter page
   if (header.className === "active") {
     header.classList.add("inactive");
     header.classList.remove("active");
@@ -138,6 +143,7 @@ function Restart() {
 }
 
 function CoffeeChoice(event) {
+  // selects the coffee that the user clicks on
   let button1 = document.getElementById("continue");
   if (document.querySelector("#options div.selected") !== null) {
     document
@@ -145,11 +151,13 @@ function CoffeeChoice(event) {
       .classList.remove("selected");
   }
   event.target.className = "Option selected";
-  button1.style.backgroundColor = "#e05e33";
+  button1.style.backgroundColor = "#cb481c";
 }
 
 function CupChoice(event) {
+  // selects the amount of cups that the user clicks
   let button1 = document.getElementById("continue2");
+
   if (document.querySelector("#options div.cups.selected") !== null) {
     document
       .querySelector("#options div.cups.selected")
@@ -158,14 +166,17 @@ function CupChoice(event) {
 
   if (event.target.className !== "form-input") {
     event.target.className = "Option cups selected";
-    button1.style.backgroundColor = "#e05e33";
+    button1.style.backgroundColor = "#cb481c";
     document.querySelector("input").value = "";
   }
 }
 
 function WaterUnit(id) {
+  // handles the water unit change
   let currentlySelected = document.querySelector(".button-selected-water");
   let newSelected = document.getElementById(id);
+
+  // runs if the selected unit is not the previously selected one
   if (currentlySelected.id !== id) {
     currentlySelected.classList.remove("button-selected-water");
     if (id === "wat-oz") {
@@ -191,6 +202,7 @@ function WaterUnit(id) {
 }
 
 function CoffeeUnit(id) {
+  // handles the coffee unit change
   let currentlySelected = document.querySelector(".button-selected-coffee");
   let newSelected = document.getElementById(id);
 
@@ -198,6 +210,7 @@ function CoffeeUnit(id) {
   let strength = localStorage.getItem("CoffeeStrength");
   let coffeeCount = Math.round(waterCount / strength);
 
+  // runs if the selected unit is not the previously selected one
   if (currentlySelected.id !== id) {
     currentlySelected.classList.remove("button-selected-coffee");
     if (id === "cof-oz") {
@@ -219,11 +232,13 @@ function CoffeeUnit(id) {
 }
 
 function GrindUnit(id) {
+  // handles the grind unit change
   let currentlySelected = document.querySelector(".button-selected-grind");
   let newSelected = document.getElementById(id);
   let grindUnit = localStorage.getItem("grindType");
   let newGrindUnit = 0;
 
+  // determines the displayed grind unit based on the descriptor
   if (grindUnit === "coarse") {
     newGrindUnit = "1 - 2";
   } else if (grindUnit === "fine") {
@@ -234,6 +249,7 @@ function GrindUnit(id) {
     newGrindUnit = "4 - 5";
   }
 
+  // runs if the selected unit is not the previously selected one
   if (currentlySelected.id !== id) {
     currentlySelected.classList.remove("button-selected-grind");
     if (id === "num") {

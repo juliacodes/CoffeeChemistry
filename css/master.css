@@ -28,7 +28,7 @@ header {
 h1 {
   font-weight: 200;
   letter-spacing: 0.1em;
-  font-size: 17px;
+  font-size: 19px;
   text-align: center;
   line-height: 150%;
   margin-bottom: 20px; }
@@ -141,12 +141,12 @@ main {
   margin: 30px auto;
   width: 140px;
   height: 32px;
-  background-color: #e05e33;
+  background-color: #cb481c;
   border-radius: 3px;
   border: none;
   color: white;
   font-family: "Muli", sans-serif;
-  font-size: 17px;
+  font-size: 19px;
   line-height: 150%;
   font-weight: 500;
   opacity: 0;
@@ -171,13 +171,16 @@ main {
     .Standard {
       margin: 45px auto; } }
 
+label {
+  display: none; }
+
 .noAnim {
   animation: none !important;
   opacity: 1;
-  background-color: gray; }
+  background-color: #979696; }
 
 .end {
-  background-color: #e05e33; }
+  background-color: #cb481c; }
 
 @keyframes fade-in {
   0% {
@@ -283,7 +286,7 @@ footer {
     transform: translateY(0px);
     box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.1); }
   100% {
-    border: 3px solid #e05e33;
+    border: 3px solid #cb481c;
     transform: translateY(-20px);
     box-shadow: 0px 3px 30px rgba(0, 0, 0, 0.2); } }
 
@@ -292,7 +295,7 @@ footer {
 
 @keyframes selectionRemoved {
   0% {
-    border: 3px solid #e05e33;
+    border: 3px solid #cb481c;
     transform: translateY(-20px);
     box-shadow: 0px 3px 30px rgba(0, 0, 0, 0.2); }
   100% {
@@ -310,7 +313,8 @@ footer {
   background-position: bottom;
   color: white;
   padding-top: 30px;
-  background-position-y: top; }
+  background-position-y: top;
+  background-color: black; }
   @media only screen and (min-width: 959px) {
     .cups {
       height: 400px;
@@ -332,7 +336,8 @@ footer {
   background-position: unset;
   background-repeat: no-repeat;
   background-size: cover;
-  pointer-events: none; }
+  pointer-events: none;
+  background-color: black; }
   .cupsmore .form-count-p {
     transform: translateY(110px) !important;
     background-image: none;
