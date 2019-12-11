@@ -1,1 +1,9 @@
-export { QUERIES, COLORS, Heading, SmallHeading, Button } from './styles';
+export {
+    QUERIES,
+    COLORS,
+    Wrapper,
+    Container,
+    Heading,
+    SmallHeading,
+    Button
+} from './styles';
