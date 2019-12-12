@@ -3,15 +3,12 @@ import { FlexRowCont, Left, Right, FlexImage } from './styles';
 import { Link } from 'react-router-dom';
 import { Heading, Paragraph, Button, Break } from '../../Styling';
 
-function FlexRow() {
+function FlexRow(props) {
     return (
-        <FlexRowCont>
-            <Left>
-                <Heading>BREW WITH CONFIDENCE</Heading>
-                <Paragraph>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi,
-                    donec in vitae nulla at aliquet quis velit eget.
-                </Paragraph>
+        <FlexRowCont direction={props.direction}>
+            <Left color={props.color} backgroundColor={props.backgroundColor}>
+                <Heading>{props.Heading}</Heading>
+                <Paragraph>{props.Paragraph}</Paragraph>
                 <Break>
                     <Link to='/guides'>
                         <Button>View Guides</Button>
@@ -19,7 +16,7 @@ function FlexRow() {
                 </Break>
             </Left>
             <Right>
-                <FlexImage />
+                <FlexImage image={props.image} />
             </Right>
         </FlexRowCont>
     );
