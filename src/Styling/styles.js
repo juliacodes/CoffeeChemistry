@@ -23,6 +23,7 @@ export const Inner = styled.div`
     width: 100vw;
     height: auto;
     margin: 0 auto;
+    padding-top: 130px;
     display: flex;
     flex-direction: column;
     justify-content: center;

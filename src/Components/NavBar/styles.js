@@ -6,11 +6,20 @@ export const NavBarCont = styled.div`
     width: 100%;
     height: 130px;
     background-color: white;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 30px;
-    max-width: ${QUERIES.maxWidth};
     margin: 0 auto;
+    position: fixed;
+    z-index: 99;
+    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
+`;
+
+export const Inner = styled.div`
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 30px;
+    align-items: center;
+    max-width: ${QUERIES.maxWidth};
+    display: flex;
 
     @media (${QUERIES.medium}) {
         padding: 20px 50px;
