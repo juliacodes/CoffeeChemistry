@@ -7,13 +7,17 @@ import robusta from '../../Images/robusta.jpg';
 
 export const ExploreRowCont = styled.div`
     width: 100%;
-    margin: 100px 0 400px 0;
+    margin: 100px 0 1400px 0;
 
     ${SmallHeading} {
         text-align: center;
         z-index: 3;
         display: block;
         position: relative;
+    }
+
+    @media (${QUERIES.medium}) {
+        margin: 100px 0 400px 0;
     }
 `;
 
