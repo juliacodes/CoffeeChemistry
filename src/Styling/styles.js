@@ -74,10 +74,10 @@ export const Button = styled.button`
     margin-top: 20px;
     cursor: pointer;
     transition-duration: 0.3s;
-    z-index: 3;
+    z-index: 1;
 
     :hover {
-        color: white;
+        color: white !important;
     }
 
     :after {
@@ -96,6 +96,8 @@ export const Button = styled.button`
 
     :hover:after {
         opacity: 1;
+        z-index: -3;
+
         height: 100%;
     }
 `;

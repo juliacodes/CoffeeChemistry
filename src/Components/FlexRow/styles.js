@@ -35,6 +35,14 @@ export const Left = styled.div`
     ${Button} {
         color: ${props => props.color || `${COLORS.darkBlue}`};
         border-color: ${props => props.color || `${COLORS.darkBlue}`};
+
+        :hover {
+            color: white;
+        }
+
+        :hover:after {
+            background-color: ${props => props.color || `${COLORS.darkBlue}`};
+        }
     }
 
     @media (${QUERIES.medium}) {

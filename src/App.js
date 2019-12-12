@@ -4,6 +4,7 @@ import NavBar from './Components/NavBar';
 import FlexRow from './Components/FlexRow';
 import ExploreRow from './Components/ExploreRow';
 import brewTypes from './Images/brewTypes.jpg';
+import { Footer } from './Components/Footer';
 function App() {
     return (
         <Container>
@@ -24,6 +25,7 @@ function App() {
                     Paragraph='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi,
                     donec in vitae nulla at aliquet quis velit eget.'
                 />
+                <Footer />
             </Inner>
         </Container>
     );
