@@ -1,13 +1,15 @@
 import React from 'react';
-import { Container, Wrapper } from './Styling';
-import Starter from './Components/Starter';
+import { Container, Inner } from './Styling';
+import NavBar from './Components/NavBar';
+import FlexRow from './Components/FlexRow';
 function App() {
     return (
-        <Wrapper>
-            <Container>
-                <Starter />
-            </Container>
-        </Wrapper>
+        <Container>
+            <NavBar />
+            <Inner>
+                <FlexRow />
+            </Inner>
+        </Container>
     );
 }
 

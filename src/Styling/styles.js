@@ -2,26 +2,26 @@ import styled from 'styled-components';
 
 export const QUERIES = {
     medium: `min-width: 1092px`,
-    small: `min-width: 552px`
+    small: `min-width: 552px`,
+    maxWidth: `1500px`
 };
 
 export const COLORS = {
-    lightOrange: '#FBDAC9',
-    orange: '#E05E33',
-    grayBackground: '#FAFAFA',
-    deepNavy: '#292E58',
-    lightGray: '#757575',
-    brown: '#602B1C'
+    lightBlue: '#E7F0FE',
+    darkBlue: '#3A3578',
+    lightPink: '#FAF1EF',
+    darkPink: '#E98383'
 };
-export const Wrapper = styled.div`
-    width: 100vw;
-    height: 100vh;
-    background-color: ${COLORS.lightOrange};
-`;
+
 export const Container = styled.div`
     width: 100vw;
     height: 100vh;
-    max-width: 2000px;
+`;
+
+export const Inner = styled.div`
+    max-width: ${QUERIES.maxWidth};
+    width: 100vw;
+    height: auto;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -29,8 +29,10 @@ export const Container = styled.div`
 `;
 
 export const Heading = styled.h1`
-    font-size: 20px;
-    color: black;
+    font-size: 35px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: ${COLORS.darkBlue};
 `;
 
 export const SmallHeading = styled.h2`
@@ -39,21 +41,32 @@ export const SmallHeading = styled.h2`
     font-weight: 300;
 `;
 
-export const Button = styled.button`
-    outline: none;
-    width: 120px;
-    padding: 8px;
-    background: ${COLORS.orange};
+export const Paragraph = styled.p`
     font-size: 13px;
+    color: ${COLORS.darkBlue};
+    font-size: 13px;
+    line-height: 117%;
+    letter-spacing: 0.14em;
+    text-transform: lowercase;
+`;
+
+export const Break = styled.span`
+    flex-basis: 100%;
+`;
+
+export const Button = styled.button`
+    font-family: 'Muli', sans-serif;
+    text-transform: uppercase;
+    outline: none;
+    width: 140px;
+    padding: 8px;
+    background: transparent;
+    font-size: 12px;
+    letter-spacing: 0.24em;
     line-height: 17px;
-    border-radius: 20px;
-    color: white;
-    border: 3px solid ${COLORS.lightOrange};
+    color: ${COLORS.darkBlue};
+    border: 0.5px solid ${COLORS.darkBlue};
     margin-top: 20px;
     cursor: pointer;
     transition-duration: 0.3s;
-
-    :hover {
-        background-color: ${COLORS.brown};
-    }
 `;

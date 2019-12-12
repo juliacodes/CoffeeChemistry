@@ -1,9 +1,11 @@
 export {
     QUERIES,
     COLORS,
-    Wrapper,
     Container,
+    Inner,
     Heading,
     SmallHeading,
+    Paragraph,
+    Break,
     Button
 } from './styles';
