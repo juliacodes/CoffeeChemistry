@@ -14,6 +14,7 @@ function App() {
                     Heading='brew with confidence'
                     Paragraph='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi,
                     donec in vitae nulla at aliquet quis velit eget.'
+                    button='view guides'
                 />
                 <ExploreRow />
                 <FlexRow
@@ -24,6 +25,7 @@ function App() {
                     Heading='Recipes by brew type'
                     Paragraph='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi,
                     donec in vitae nulla at aliquet quis velit eget.'
+                    button='view recipes'
                 />
                 <Footer />
             </Inner>

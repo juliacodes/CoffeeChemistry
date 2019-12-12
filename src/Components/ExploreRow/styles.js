@@ -27,6 +27,7 @@ export const TriSplit = styled.div`
     background-image: url(${mountain});
     background-size: cover;
     background-repeat: no-repeat;
+    background-position-x: center;
     overflow: visible;
     display: flex;
     justify-content: center;

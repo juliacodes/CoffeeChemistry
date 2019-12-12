@@ -10,7 +10,7 @@ const FlexRow = props => (
             <Paragraph>{props.Paragraph}</Paragraph>
             <Break>
                 <Link to='/guides'>
-                    <Button>View Guides</Button>
+                    <Button>{props.button}</Button>
                 </Link>
             </Break>
         </Left>
