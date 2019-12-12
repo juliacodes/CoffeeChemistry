@@ -24,6 +24,7 @@ export const Inner = styled.div`
     height: auto;
     margin: 0 auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 `;
@@ -36,8 +37,10 @@ export const Heading = styled.h1`
 `;
 
 export const SmallHeading = styled.h2`
-    font-size: 13px;
-    color: black;
+    font-size: 25px;
+    color: ${COLORS.darkBlue};
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
     font-weight: 300;
 `;
 
@@ -56,6 +59,7 @@ export const Break = styled.span`
 
 export const Button = styled.button`
     font-family: 'Muli', sans-serif;
+    position: relative;
     text-transform: uppercase;
     outline: none;
     width: 140px;
@@ -69,4 +73,28 @@ export const Button = styled.button`
     margin-top: 20px;
     cursor: pointer;
     transition-duration: 0.3s;
+    z-index: 3;
+
+    :hover {
+        color: white;
+    }
+
+    :after {
+        position: absolute;
+        opacity: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
+        content: '';
+        width: 140px;
+        height: 0;
+        background-color: ${COLORS.darkBlue};
+        transition-duration: 0.3s;
+        z-index: -1;
+    }
+
+    :hover:after {
+        opacity: 1;
+        height: 100%;
+    }
 `;

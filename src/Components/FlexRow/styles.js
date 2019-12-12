@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { QUERIES, COLORS, Heading, Paragraph } from '../../Styling';
 import Landing from '../../Images/Landing.jpg';
+
 export const FlexRowCont = styled.div`
     width: 100%;
     display: flex;
