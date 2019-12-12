@@ -10,6 +10,7 @@ function App() {
             <Inner>
                 <FlexRow />
                 <ExploreRow />
+                <FlexRow />
             </Inner>
         </Container>
     );
