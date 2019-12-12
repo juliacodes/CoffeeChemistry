@@ -9,7 +9,7 @@ export const NavBarCont = styled.div`
     margin: 0 auto;
     position: fixed;
     z-index: 99;
-    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
+    transition-duration: 0.3s;
 `;
 
 export const Inner = styled.div`
