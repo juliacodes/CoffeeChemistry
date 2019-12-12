@@ -22,6 +22,13 @@ const FormCont = styled.form`
         }
     }
 
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+        background-color: #cccccc !important;
+    }
+
     button {
         border-radius: 3px;
         width: 50px;
