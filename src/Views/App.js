@@ -1,10 +1,10 @@
 import React from 'react';
-import { Container, Inner } from './Styling';
-import NavBar from './Components/NavBar';
-import FlexRow from './Components/FlexRow';
-import ExploreRow from './Components/ExploreRow';
-import brewTypes from './Images/brewTypes.jpg';
-import { Footer } from './Components/Footer';
+import { Container, Inner } from '../Styling';
+import NavBar from '../Components/NavBar';
+import FlexRow from '../Components/FlexRow';
+import ExploreRow from '../Components/ExploreRow';
+import brewTypes from '../Images/brewTypes.jpg';
+import { Footer } from '../Components/Footer';
 function App() {
     return (
         <Container>

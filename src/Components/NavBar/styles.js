@@ -39,6 +39,13 @@ export const NavLinks = styled.div`
         letter-spacing: 0.24em;
         color: ${COLORS.darkBlue};
         margin: 20px;
+        transition-duration: 0.3s;
+        border-bottom: 1px solid transparent;
+        padding-bottom: 2px;
+
+        :hover {
+            border-bottom: 1px solid ${COLORS.darkBlue};
+        }
     }
 
     @media (${QUERIES.medium}) {

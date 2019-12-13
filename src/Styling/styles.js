@@ -59,6 +59,7 @@ export const Break = styled.span`
 `;
 
 export const Button = styled.button`
+    border: none;
     font-family: 'Muli', sans-serif;
     position: relative;
     text-transform: uppercase;
