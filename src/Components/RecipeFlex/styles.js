@@ -36,10 +36,14 @@ export const Left = styled.div`
 `;
 
 export const MainImage = styled.img`
-    width: 60%;
+    width: 40%;
     z-index: 1;
     position: relative;
     max-width: 300px;
+
+    @media (${QUERIES.medium}) {
+        width: 60%;
+    }
 `;
 
 export const RecipeContent = styled.div`
@@ -54,16 +58,17 @@ export const RecipeContent = styled.div`
 `;
 
 export const Inputs = styled.div`
-    padding: 100px 0 100px 0;
+    padding: 80px 0 50px 0;
     width: 100%;
     background-color: #f9f8f8;
 
     @media (${QUERIES.medium}) {
         width: 50%;
+        padding: 100px 0 100px 0;
     }
 
     form {
-        padding: 10px 50px;
+        padding: 5px 30px;
         width: 100%;
         height: auto;
         margin: 0 auto;
@@ -71,6 +76,7 @@ export const Inputs = styled.div`
 
         @media (${QUERIES.medium}) {
             width: 500px;
+            padding: 10px 50px;
         }
         legend {
             text-transform: uppercase;
@@ -80,8 +86,11 @@ export const Inputs = styled.div`
             letter-spacing: 0.2em;
             color: #9291bd;
             position: absolute;
-            top: 57px;
+            top: 40px;
             margin-left: 15px;
+            @media (${QUERIES.medium}) {
+                top: 57px;
+            }
         }
 
         input {
@@ -92,10 +101,14 @@ export const Inputs = styled.div`
             background-color: transparent;
             border: none;
             margin-top: 5px;
-            padding: 45px 10px 12px 15px;
+            padding: 35px 10px 5px 15px;
             color: #656499;
             outline: none;
             width: 100%;
+
+            @media (${QUERIES.medium}) {
+                padding: 45px 10px 12px 15px;
+            }
 
             ::placeholder {
                 color: #656499;
@@ -114,13 +127,17 @@ export const Inputs = styled.div`
         }
 
         p {
-            padding: 45px 10px 12px 15px;
+            padding: 25px 10px 12px 15px;
             color: #656499;
             font-size: 15px;
             font-weight: 900;
             text-transform: capitalize;
             line-height: 117%;
             letter-spacing: 0.2em;
+
+            @media (${QUERIES.medium}) {
+                padding: 45px 10px 12px 15px;
+            }
         }
     }
 `;
@@ -131,14 +148,20 @@ export const Steps = styled.div`
     text-align: center;
     justify-content: center;
     align-items: center;
+    margin-top: 40px;
 
     @media (${QUERIES.medium}) {
         width: 50%;
+        margin-top: 0;
     }
 `;
 
 export const Step = styled.div`
-    margin: 20px auto;
+    margin: 10px auto;
+
+    @media (${QUERIES.medium}) {
+        margin: 20px auto;
+    }
 
     p {
         text-transform: uppercase;

@@ -41,12 +41,7 @@ const RecipeFlex = () => (
                         Servings <u>Edit</u>
                     </label>
                     <br />
-                    <input
-                        type='number'
-                        name='name'
-                        placeholder='2'
-                        value='2'
-                    />
+                    <input type='number' name='name' placeholder='2' />
                 </form>
                 <form>
                     <legend>
