@@ -1,14 +1,15 @@
 import styled from 'styled-components';
-import { QUERIES, Paragraph } from '../../Styling';
+import { QUERIES, Paragraph, SmallHeading } from '../../Styling';
 export const RecipeFlexCont = styled.div`
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap-reverse;
 `;
 
 export const Right = styled.div`
-    width: 50%;
+    width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -21,13 +22,17 @@ export const Right = styled.div`
 
     @media (${QUERIES.medium}) {
         padding: 0 50px;
+        width: 50%;
     }
 `;
 
 export const Left = styled.div`
-    width: 50%;
+    width: 100%;
     height: auto;
     text-align: center;
+    @media (${QUERIES.medium}) {
+        width: 50%;
+    }
 `;
 
 export const MainImage = styled.img`
@@ -45,19 +50,28 @@ export const RecipeContent = styled.div`
     transform: translateY(-100px);
     position: relative;
     z-index: 0;
+    flex-wrap: wrap;
 `;
 
 export const Inputs = styled.div`
     padding: 100px 0 100px 0;
-    width: 50%;
+    width: 100%;
     background-color: #f9f8f8;
 
+    @media (${QUERIES.medium}) {
+        width: 50%;
+    }
+
     form {
-        padding: 20px 50px;
-        width: 500px;
+        padding: 10px 50px;
+        width: 100%;
         height: auto;
         margin: 0 auto;
         position: relative;
+
+        @media (${QUERIES.medium}) {
+            width: 500px;
+        }
         legend {
             text-transform: uppercase;
             font-weight: 900;
@@ -74,7 +88,6 @@ export const Inputs = styled.div`
             font-weight: 900;
             font-size: 30px;
             line-height: 117%;
-            /* identical to box height, or 35px */
             letter-spacing: 0.2em;
             background-color: transparent;
             border: none;
@@ -82,6 +95,7 @@ export const Inputs = styled.div`
             padding: 45px 10px 12px 15px;
             color: #656499;
             outline: none;
+            width: 100%;
 
             ::placeholder {
                 color: #656499;
@@ -92,8 +106,76 @@ export const Inputs = styled.div`
                 background-color: white;
             }
         }
+
+        .disabled {
+            :hover {
+                background-color: transparent;
+            }
+        }
+
+        p {
+            padding: 45px 10px 12px 15px;
+            color: #656499;
+            font-size: 15px;
+            font-weight: 900;
+            text-transform: capitalize;
+            line-height: 117%;
+            letter-spacing: 0.2em;
+        }
     }
 `;
 export const Steps = styled.div`
-    width: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    @media (${QUERIES.medium}) {
+        width: 50%;
+    }
+`;
+
+export const Step = styled.div`
+    margin: 20px auto;
+
+    p {
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 15px;
+        line-height: 117%;
+        letter-spacing: 0.2em;
+        color: #9291bd;
+        padding: 0;
+        margin: 10px auto;
+        width: fit-content;
+        text-align: center;
+
+        &:nth-child(2) {
+            font-size: 20px;
+            color: #656499;
+            border-bottom: 1px solid #656499;
+            text-transform: capitalize;
+        }
+
+        &:nth-child(3) {
+            text-align: center;
+            font-size: 40px;
+            letter-spacing: 0.2em;
+            text-transform: capitalize;
+            color: #656499;
+        }
+    }
+`;
+
+export const Enjoy = styled.div`
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    ${SmallHeading} {
+        margin: 0;
+    }
 `;
