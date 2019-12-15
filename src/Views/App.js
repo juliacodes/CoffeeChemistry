@@ -12,6 +12,7 @@ function App() {
             <Inner>
                 <FlexRow
                     Heading='brew with confidence'
+                    link='/guides'
                     Paragraph='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi,
                     donec in vitae nulla at aliquet quis velit eget.'
                     button='view guides'
@@ -21,6 +22,7 @@ function App() {
                     backgroundColor='#FAF1EF'
                     color='#E98383'
                     image={brewTypes}
+                    link='/recipes'
                     direction='row-reverse'
                     Heading='Recipes by brew type'
                     Paragraph='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi,

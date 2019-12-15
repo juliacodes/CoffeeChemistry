@@ -9,7 +9,7 @@ const FlexRow = props => (
             <Heading>{props.Heading}</Heading>
             <Paragraph>{props.Paragraph}</Paragraph>
             <Break>
-                <Link to='/guides'>
+                <Link to={props.link}>
                     <Button>{props.button}</Button>
                 </Link>
             </Break>

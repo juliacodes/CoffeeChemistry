@@ -3,18 +3,18 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './Views/App';
 import Recipes from './Views/Recipes';
-
+import ScrollToTop from './Handler/ScrollToTop';
 import * as serviceWorker from './serviceWorker';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 
 const routing = (
     <BrowserRouter>
-        <div>
+        <ScrollToTop>
             <Switch>
                 <Route exact path='/' component={App} />
                 <Route path='/recipes' component={Recipes} />
             </Switch>
-        </div>
+        </ScrollToTop>
     </BrowserRouter>
 );
 

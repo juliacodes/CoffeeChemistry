@@ -56,7 +56,9 @@ export default class Navbar extends React.Component {
                 }
             >
                 <Inner>
-                    <Logo src={logo} alt={logo} />
+                    <Link to='/'>
+                        <Logo src={logo} alt={logo} />
+                    </Link>
                     <NavLinks>
                         <Link to='/about'>about</Link>
                         <Link to='/guides'>guides</Link>
