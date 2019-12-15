@@ -3,6 +3,7 @@ export {
     COLORS,
     Container,
     Inner,
+    Outer,
     Heading,
     SmallHeading,
     Paragraph,

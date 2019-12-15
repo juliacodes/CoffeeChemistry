@@ -30,6 +30,10 @@ export const Inner = styled.div`
     align-items: center;
 `;
 
+export const Outer = styled(Inner)`
+    max-width: unset;
+`;
+
 export const Heading = styled.h1`
     font-size: 35px;
     letter-spacing: 0.2em;
