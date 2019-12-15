@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { COLORS, Heading } from '../../Styling';
+import { Heading } from '../../Styling';
 import chemex from '../../Images/chemex.png';
 import french from '../../Images/french.png';
 import espres from '../../Images/espres.png';

@@ -1,9 +1,8 @@
 import React from 'react';
-import { RecipeListCont, Option, Right, FlexImage } from './styles';
-import { Link } from 'react-router-dom';
-import { Heading, Paragraph, Button, Break } from '../../Styling';
+import { RecipeListCont, Option } from './styles';
+import { Heading } from '../../Styling';
 
-const RecipeList = props => (
+const RecipeList = () => (
     <RecipeListCont>
         <Heading>Recipes</Heading>
         <Option>Chemex</Option>
