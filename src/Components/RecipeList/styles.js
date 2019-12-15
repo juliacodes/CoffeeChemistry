@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { Heading } from '../../Styling';
+import styled from 'styled-components/macro';
+import { QUERIES, Heading } from '../../Styling';
 import chemex from '../../Images/chemex.png';
 import french from '../../Images/french.png';
 import espres from '../../Images/espres.png';
@@ -8,7 +8,7 @@ import pourov from '../../Images/pourov.png';
 export const RecipeListCont = styled.div`
     width: 100%;
     display: flex;
-    margin-top: 50px;
+    margin-top: 20px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -17,6 +17,15 @@ export const RecipeListCont = styled.div`
         text-align: center;
         margin-bottom: 50px;
     }
+
+    @media (${QUERIES.medium}) {
+        margin-top: 50px;
+    }
+
+    a {
+        border: none;
+        text-decoration: none;
+    }
 `;
 
 export const Option = styled.div`
@@ -24,33 +33,46 @@ export const Option = styled.div`
     text-align: center;
     font-weight: 900;
     color: #ededed;
-    font-size: 185.376px;
+    font-size: 20px;
+    height: 300px;
     line-height: 117%;
     letter-spacing: 0.24em;
     text-transform: uppercase;
-    margin: 100px 0;
+    margin: 50px 0;
     position: relative;
     transition-duration: 0.3s;
+    overflow: visible;
+    width: 100vw;
+
+    @media (${QUERIES.medium}) {
+        margin-top: 100px;
+        font-size: 185.376px;
+        height: unset;
+    }
 
     ::after {
         content: '';
         position: absolute;
-        top: -50px;
+        top: 0px;
         left: calc(50% - (250px / 2));
         width: 220px;
         height: 372px;
         background-image: url(${chemex});
         background-size: cover;
         transition: transform 0.3s;
+
+        @media (${QUERIES.medium}) {
+            top: -50px;
+        }
     }
 
-    :nth-child(3) {
+    &.french {
         ::after {
             background-image: url(${french});
         }
     }
 
-    :nth-child(4) {
+    &.espresso {
         ::after {
             background-image: url(${espres});
             left: calc(50% - (280px / 2));
@@ -60,7 +82,7 @@ export const Option = styled.div`
         }
     }
 
-    :nth-child(5) {
+    &.pourover {
         ::after {
             background-image: url(${pourov});
             left: calc(50% - (320px / 2));
