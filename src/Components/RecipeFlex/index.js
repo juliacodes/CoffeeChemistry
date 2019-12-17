@@ -124,7 +124,7 @@ const RecipeFlex = () => (
             </Steps>
         </RecipeContent>
         <Enjoy>
-            <img src={cup} />
+            <img src={cup} alt={cup} />
             <SmallHeading>Enjoy</SmallHeading>
         </Enjoy>
     </>
