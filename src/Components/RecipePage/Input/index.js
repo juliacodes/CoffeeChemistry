@@ -27,11 +27,11 @@ const Input = props => (
             <br />
             <InputWrapper>
                 <datalist id='ticks'>
-                    <option id='weak'>Weak</option>
+                    <option id='weak'></option>
                     <option id='medWeak'></option>
-                    <option id='med'>&nbsp; Medium</option>
+                    <option id='med'></option>
                     <option id='medStrong'></option>
-                    <option id='strong'> Strong</option>
+                    <option id='strong'></option>
                 </datalist>
                 <input
                     id='CoffeeStrength'

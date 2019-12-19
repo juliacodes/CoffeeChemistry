@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { QUERIES, COLORS } from '../../../Styling';
+import bean from '../../../Images/bean.jpg';
 
 export const Inputs = styled.div`
     padding: 80px 0 50px 0;
@@ -127,10 +128,28 @@ export const InputWrapper = styled.div`
 
         option {
             display: block;
-            padding-bottom: 10px;
-            font-weight: 400;
+            width: 30px;
             @media only screen and (min-width: 959px) {
                 width: unset;
+            }
+
+            &#weak,
+            &#med,
+            &#strong {
+                background-image: url(${bean});
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 20px;
+                height: 20px;
+                margin-bottom: 10px;
+            }
+
+            &#weak {
+                opacity: 0.1;
+            }
+
+            &#med {
+                opacity: 0.4;
             }
         }
 
