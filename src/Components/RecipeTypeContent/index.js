@@ -5,7 +5,7 @@ import RecipeContent from '../RecipeContent';
 import chemexLarge from '../../Images/chemexLarge.png';
 import cup from '../../Images/cup.jpg';
 
-const RecipeFlex = () => (
+const RecipeTypeContent = () => (
     <>
         <RecipeFlexCont>
             <Left>
@@ -30,4 +30,4 @@ const RecipeFlex = () => (
     </>
 );
 
-export default RecipeFlex;
+export default RecipeTypeContent;

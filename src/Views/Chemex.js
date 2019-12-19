@@ -1,15 +1,15 @@
 import React from 'react';
 import { Container, Inner } from '../Styling';
-import RecipeFlex from '../Components/RecipeFlex';
+import RecipeTypeContent from '../Components/RecipeTypeContent';
 import NavBar from '../Components/NavBar';
+import Footer from '../Components/Footer';
 
-import { Footer } from '../Components/Footer';
 function Chemex() {
     return (
         <Container>
             <NavBar />
             <Inner>
-                <RecipeFlex />
+                <RecipeTypeContent />
                 <Footer />
             </Inner>
         </Container>
