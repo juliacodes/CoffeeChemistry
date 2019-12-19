@@ -12,7 +12,7 @@ export const StepsCont = styled.div`
 
     @media (${QUERIES.medium}) {
         width: 50%;
-        margin-top: 0;
+        margin-top: 100px;
     }
 `;
 

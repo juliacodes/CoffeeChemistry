@@ -1,7 +1,7 @@
 import React from 'react';
 import { Inputs, InputWrapper } from './styles';
 
-const Input = () => (
+const Input = props => (
     <Inputs>
         <form>
             <legend>
@@ -85,7 +85,7 @@ const Input = () => (
             <legend>Equipment</legend>
             <label style={{ display: 'none' }}>Coffee Grounds</label>
             <br />
-            <p>Chemex carafe, chemex filters, grinder, digital scale, kettle</p>
+            <p>{props.ingredients}</p>
         </form>
     </Inputs>
 );

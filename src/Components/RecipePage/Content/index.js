@@ -3,10 +3,10 @@ import { RecipeCont } from './styles';
 import Steps from '../Steps';
 import Input from '../Input';
 
-const Content = () => (
+const Content = props => (
     <RecipeCont>
-        <Input />
-        <Steps />
+        <Input ingredients={props.ingredients} />
+        <Steps steps={props.steps} />
     </RecipeCont>
 );
 

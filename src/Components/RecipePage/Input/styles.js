@@ -103,7 +103,6 @@ export const InputWrapper = styled.div`
         width: 80%;
         height: 5px;
         cursor: pointer;
-        animate: 0.2s;
         background: ${COLORS.lightPurple};
         border-radius: 1px;
     }
