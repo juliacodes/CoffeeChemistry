@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { QUERIES } from '../../Styling';
+import { QUERIES, COLORS } from '../../Styling';
 
 export const RecipeCont = styled.div`
     display: flex;
@@ -29,6 +29,10 @@ export const Inputs = styled.div`
         margin: 0 auto;
         position: relative;
 
+        .drag-legend {
+            top: 60px;
+        }
+
         @media (${QUERIES.medium}) {
             width: 500px;
             padding: 10px 50px;
@@ -48,7 +52,7 @@ export const Inputs = styled.div`
             }
         }
 
-        input {
+        .num-input {
             font-weight: 900;
             font-size: 30px;
             line-height: 117%;
@@ -94,6 +98,71 @@ export const Inputs = styled.div`
                 padding: 45px 10px 12px 15px;
             }
         }
+    }
+`;
+
+export const InputWrapper = styled.div`
+    padding: 45px 15px 0 15px;
+    width: 100%;
+    input {
+        -webkit-appearance: none;
+        background-color: transparent;
+        outline: none;
+    }
+
+    input[type='range']::-webkit-slider-runnable-track {
+        width: 80%;
+        height: 5px;
+        cursor: pointer;
+        animate: 0.2s;
+        background: #9291bd;
+        /* background: #656499; */
+        border-radius: 1px;
+        border: 0px solid #000000;
+    }
+
+    input[type='range']::-webkit-slider-thumb {
+        box-shadow: 0px 0px 0px #000000;
+        border: 2px solid #656499;
+        height: 20px;
+        width: 20px;
+        border-radius: 25px;
+        background: white;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -7px;
+    }
+
+    #ticks {
+        display: flex;
+        width: 85%;
+        justify-content: space-between;
+
+        option {
+            display: block;
+            padding-bottom: 10px;
+            @media only screen and (min-width: 959px) {
+                width: unset;
+            }
+        }
+
+        @media only screen and (min-width: 959px) {
+            justify-content: space-between;
+            width: 100%;
+            option:nth-child(2n + 2) {
+                display: block;
+            }
+        }
+    }
+
+    .dragger {
+        position: relative;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    :hover {
+        background-color: white;
     }
 `;
 export const Steps = styled.div`

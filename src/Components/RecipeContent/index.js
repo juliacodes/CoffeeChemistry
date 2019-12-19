@@ -1,5 +1,5 @@
 import React from 'react';
-import { RecipeCont, Inputs, Steps, Step } from './styles';
+import { RecipeCont, Inputs, Steps, Step, InputWrapper } from './styles';
 
 const RecipeContent = () => (
     <RecipeCont>
@@ -12,15 +12,52 @@ const RecipeContent = () => (
                     Servings <u>Edit</u>
                 </label>
                 <br />
-                <input type='number' name='name' placeholder='2' />
+                <input
+                    className='num-input'
+                    type='number'
+                    name='name'
+                    placeholder='2'
+                />
             </form>
             <form>
-                <legend>
+                <legend className='drag-legend'>
                     Strength <u>Edit</u>
                 </legend>
                 <label style={{ display: 'none' }}>Strength</label>
                 <br />
-                <input type='text' name='name' placeholder='Medium' />
+                <br />
+                <InputWrapper>
+                    <datalist id='ticks'>
+                        <option id='weak'>Weak</option>
+                        <option id='medWeak'></option>
+                        <option id='med'>&nbsp; Medium</option>
+                        <option id='medStrong'></option>
+                        <option id='strong'> Strong</option>
+                    </datalist>
+                    <input
+                        id='CoffeeStrength'
+                        name='coffeestrength'
+                        className='dragger'
+                        type='range'
+                        min='1'
+                        max='5'
+                        step='1'
+                        list='ticks'
+                    />
+                </InputWrapper>
+                {/* <input
+                    type='text'
+                    list='strength'
+                    name='strength'
+                    placeholder='Medium'
+                />
+                <datalist id='strength'>
+                    <option value='Weak' />
+                    <option value='Medium Weak' />
+                    <option value='Medium' />
+                    <option value='Medium Strong' />
+                    <option value='Strong' />
+                </datalist> */}
             </form>
             <form>
                 <legend>Temperature</legend>
@@ -28,7 +65,7 @@ const RecipeContent = () => (
                 <br />
                 <input
                     disabled
-                    className='disabled'
+                    className='disabled num-input'
                     type='text'
                     name='name'
                     placeholder='200˚F'
@@ -40,7 +77,7 @@ const RecipeContent = () => (
                 <br />
                 <input
                     disabled
-                    className='disabled'
+                    className='disabled num-input'
                     type='text'
                     name='name'
                     placeholder='400g'
@@ -52,7 +89,7 @@ const RecipeContent = () => (
                 <br />
                 <input
                     disabled
-                    className='disabled'
+                    className='disabled num-input'
                     type='text'
                     name='name'
                     placeholder='30g'
