@@ -1,7 +1,7 @@
 import React from 'react';
 import { Inputs, InputWrapper } from './styles';
 
-const RecipeInput = () => (
+const Input = () => (
     <Inputs>
         <form>
             <legend>
@@ -90,4 +90,4 @@ const RecipeInput = () => (
     </Inputs>
 );
 
-export default RecipeInput;
+export default Input;

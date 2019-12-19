@@ -7,6 +7,7 @@ import Chemex from './Views/Chemex';
 import ScrollToTop from './Handler/ScrollToTop';
 import * as serviceWorker from './serviceWorker';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
+import French from './Views/French';
 
 const routing = (
     <BrowserRouter>
@@ -15,6 +16,7 @@ const routing = (
                 <Route exact path='/' component={App} />
                 <Route path='/recipes' component={Recipes} />
                 <Route path='/chemex' component={Chemex} />
+                <Route path='/french' component={French} />
             </Switch>
         </ScrollToTop>
     </BrowserRouter>

@@ -1,8 +1,8 @@
 import React from 'react';
-import { Steps, Step } from './styles';
+import { StepsCont, Step } from './styles';
 
-const RecipeSteps = () => (
-    <Steps>
+const Steps = () => (
+    <StepsCont>
         <Step>
             <p>1.</p>
             <p>Rinse Filter</p>
@@ -26,7 +26,7 @@ const RecipeSteps = () => (
             <p>5.</p>
             <p>Discard Filter</p>
         </Step>
-    </Steps>
+    </StepsCont>
 );
 
-export default RecipeSteps;
+export default Steps;

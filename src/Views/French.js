@@ -1,18 +1,19 @@
 import React from 'react';
 import { Container, Inner } from '../Styling';
+import TypeContent from '../Components/RecipePage/TypeContent';
 import NavBar from '../Components/NavBar';
 import Footer from '../Components/Footer';
-import List from '../Components/List';
-function Recipes() {
+
+function French() {
     return (
         <Container>
             <NavBar />
             <Inner>
-                <List />
+                <TypeContent type='French Press' />
                 <Footer />
             </Inner>
         </Container>
     );
 }
 
-export default Recipes;
+export default French;

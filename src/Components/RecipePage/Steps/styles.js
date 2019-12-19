@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { QUERIES, COLORS } from '../../Styling';
+import { QUERIES, COLORS } from '../../../Styling';
 
-export const Steps = styled.div`
+export const StepsCont = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;

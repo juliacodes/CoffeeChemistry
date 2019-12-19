@@ -1,18 +1,18 @@
 import React from 'react';
 import { RecipeFlexCont, Left, Right, MainImage, Enjoy } from './styles';
-import { SmallHeading, Paragraph } from '../../Styling';
-import RecipeContent from '../RecipeContent';
-import chemexLarge from '../../Images/chemexLarge.png';
-import cup from '../../Images/cup.jpg';
+import { SmallHeading, Paragraph } from '../../../Styling';
+import Content from '../Content';
+import chemexLarge from '../../../Images/chemexLarge.png';
+import cup from '../../../Images/cup.jpg';
 
-const RecipeTypeContent = () => (
+const TypeContent = props => (
     <>
         <RecipeFlexCont>
             <Left>
                 <MainImage src={chemexLarge}></MainImage>
             </Left>
             <Right>
-                <SmallHeading>Brewing with Chemex</SmallHeading>
+                <SmallHeading>Brewing with {props.type}</SmallHeading>
                 <Paragraph>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Convallis in tempor velit in egestas cursus volutpat
@@ -22,7 +22,7 @@ const RecipeTypeContent = () => (
                 </Paragraph>
             </Right>
         </RecipeFlexCont>
-        <RecipeContent />
+        <Content />
         <Enjoy>
             <img src={cup} alt={cup} />
             <SmallHeading>Enjoy</SmallHeading>
@@ -30,4 +30,4 @@ const RecipeTypeContent = () => (
     </>
 );
 
-export default RecipeTypeContent;
+export default TypeContent;

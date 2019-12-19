@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Inner } from '../Styling';
-import RecipeTypeContent from '../Components/RecipeTypeContent';
+import TypeContent from '../Components/RecipePage/TypeContent';
 import NavBar from '../Components/NavBar';
 import Footer from '../Components/Footer';
 
@@ -9,7 +9,7 @@ function Chemex() {
         <Container>
             <NavBar />
             <Inner>
-                <RecipeTypeContent />
+                <TypeContent type='Chemex' />
                 <Footer />
             </Inner>
         </Container>

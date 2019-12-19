@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { QUERIES, Paragraph, SmallHeading } from '../../Styling';
+import { QUERIES, Paragraph, SmallHeading } from '../../../Styling';
 export const RecipeFlexCont = styled.div`
     display: flex;
     width: 100%;

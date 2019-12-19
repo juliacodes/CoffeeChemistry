@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { RecipeListCont, Option } from './styles';
 import { Heading } from '../../Styling';
 
-const RecipeList = () => (
+const List = () => (
     <RecipeListCont>
         <Heading>Recipes</Heading>
         <Link to='/chemex'>
@@ -22,4 +22,4 @@ const RecipeList = () => (
     </RecipeListCont>
 );
 
-export default RecipeList;
+export default List;

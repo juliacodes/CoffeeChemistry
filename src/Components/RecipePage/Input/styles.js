@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { QUERIES, COLORS } from '../../Styling';
+import { QUERIES, COLORS } from '../../../Styling';
 
 export const Inputs = styled.div`
     padding: 80px 0 50px 0;
