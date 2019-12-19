@@ -11,11 +11,6 @@ export default class Navbar extends React.Component {
         };
     }
 
-    componentDidMount() {
-        window.addEventListener('scroll', () => this.handleScroll());
-        this.setState({ scroll: false });
-    }
-
     handleScroll() {
         // ADD IF YOU NEED BOTTOM
         // const windowHeight =
@@ -42,6 +37,10 @@ export default class Navbar extends React.Component {
                 scroll: true
             });
         }
+    }
+
+    componentDidMount() {
+        window.addEventListener('scroll', () => this.handleScroll());
     }
 
     render() {

@@ -57,7 +57,7 @@ const RecipeFlex = () => (
                     <br />
                     <input
                         disabled
-                        class='disabled'
+                        className='disabled'
                         type='text'
                         name='name'
                         placeholder='200˚F'
@@ -69,7 +69,7 @@ const RecipeFlex = () => (
                     <br />
                     <input
                         disabled
-                        class='disabled'
+                        className='disabled'
                         type='text'
                         name='name'
                         placeholder='400g'
@@ -81,7 +81,7 @@ const RecipeFlex = () => (
                     <br />
                     <input
                         disabled
-                        class='disabled'
+                        className='disabled'
                         type='text'
                         name='name'
                         placeholder='30g'
