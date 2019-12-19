@@ -1,5 +1,6 @@
 import React from 'react';
-import { RecipeCont, Inputs, Steps, Step, InputWrapper } from './styles';
+import { RecipeCont, Inputs, InputWrapper } from './styles';
+import RecipeSteps from '../RecipeSteps';
 
 const RecipeContent = () => (
     <RecipeCont>
@@ -45,19 +46,6 @@ const RecipeContent = () => (
                         list='ticks'
                     />
                 </InputWrapper>
-                {/* <input
-                    type='text'
-                    list='strength'
-                    name='strength'
-                    placeholder='Medium'
-                />
-                <datalist id='strength'>
-                    <option value='Weak' />
-                    <option value='Medium Weak' />
-                    <option value='Medium' />
-                    <option value='Medium Strong' />
-                    <option value='Strong' />
-                </datalist> */}
             </form>
             <form>
                 <legend>Temperature</legend>
@@ -105,31 +93,7 @@ const RecipeContent = () => (
                 </p>
             </form>
         </Inputs>
-        <Steps>
-            <Step>
-                <p>1.</p>
-                <p>Rinse Filter</p>
-            </Step>
-            <Step>
-                <p>2.</p>
-                <p>First Pour</p>
-                <p>400g</p>
-            </Step>
-            <Step>
-                <p>3.</p>
-                <p>Second Pour</p>
-                <p>100g</p>
-            </Step>
-            <Step>
-                <p>4.</p>
-                <p>Final Pour</p>
-                <p>200g</p>
-            </Step>
-            <Step>
-                <p>5.</p>
-                <p>Discard Filter</p>
-            </Step>
-        </Steps>
+        <RecipeSteps />
     </RecipeCont>
 );
 

@@ -10,7 +10,10 @@ export const COLORS = {
     lightBlue: '#E7F0FE',
     darkBlue: '#3A3578',
     lightPink: '#FAF1EF',
-    darkPink: '#E98383'
+    darkPink: '#E98383',
+    lightPurple: '#9291bd',
+    darkPurple: '#656499',
+    gray: '#f9f8f8'
 };
 
 export const Container = styled.div`

@@ -15,7 +15,7 @@ export const RecipeCont = styled.div`
 export const Inputs = styled.div`
     padding: 80px 0 50px 0;
     width: 100%;
-    background-color: #f9f8f8;
+    background-color: ${COLORS.gray};
 
     @media (${QUERIES.medium}) {
         width: 50%;
@@ -43,7 +43,7 @@ export const Inputs = styled.div`
             font-size: 15px;
             line-height: 117%;
             letter-spacing: 0.2em;
-            color: #9291bd;
+            color: ${COLORS.lightPurple};
             position: absolute;
             top: 40px;
             margin-left: 15px;
@@ -61,7 +61,7 @@ export const Inputs = styled.div`
             border: none;
             margin-top: 5px;
             padding: 35px 10px 5px 15px;
-            color: #656499;
+            color: ${COLORS.darkPurple};
             outline: none;
             width: 100%;
 
@@ -70,7 +70,7 @@ export const Inputs = styled.div`
             }
 
             ::placeholder {
-                color: #656499;
+                color: ${COLORS.darkPurple};
             }
 
             :hover,
@@ -87,7 +87,7 @@ export const Inputs = styled.div`
 
         p {
             padding: 25px 10px 12px 15px;
-            color: #656499;
+            color: ${COLORS.darkBlue};
             font-size: 15px;
             font-weight: 900;
             text-transform: capitalize;
@@ -115,15 +115,13 @@ export const InputWrapper = styled.div`
         height: 5px;
         cursor: pointer;
         animate: 0.2s;
-        background: #9291bd;
-        /* background: #656499; */
+        background: ${COLORS.lightPurple};
         border-radius: 1px;
-        border: 0px solid #000000;
     }
 
     input[type='range']::-webkit-slider-thumb {
         box-shadow: 0px 0px 0px #000000;
-        border: 2px solid #656499;
+        border: 2px solid ${COLORS.darkPurple};
         height: 20px;
         width: 20px;
         border-radius: 25px;
@@ -137,10 +135,12 @@ export const InputWrapper = styled.div`
         display: flex;
         width: 85%;
         justify-content: space-between;
+        color: ${COLORS.darkPurple};
 
         option {
             display: block;
             padding-bottom: 10px;
+            font-weight: 400;
             @media only screen and (min-width: 959px) {
                 width: unset;
             }
@@ -163,55 +163,5 @@ export const InputWrapper = styled.div`
 
     :hover {
         background-color: white;
-    }
-`;
-export const Steps = styled.div`
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
-
-    @media (${QUERIES.medium}) {
-        width: 50%;
-        margin-top: 0;
-    }
-`;
-
-export const Step = styled.div`
-    margin: 10px auto;
-
-    @media (${QUERIES.medium}) {
-        margin: 20px auto;
-    }
-
-    p {
-        text-transform: uppercase;
-        font-weight: 900;
-        font-size: 15px;
-        line-height: 117%;
-        letter-spacing: 0.2em;
-        color: #9291bd;
-        padding: 0;
-        margin: 10px auto;
-        width: fit-content;
-        text-align: center;
-
-        &:nth-child(2) {
-            font-size: 20px;
-            color: #656499;
-            border-bottom: 1px solid #656499;
-            text-transform: capitalize;
-        }
-
-        &:nth-child(3) {
-            text-align: center;
-            font-size: 40px;
-            letter-spacing: 0.2em;
-            text-transform: capitalize;
-            color: #656499;
-        }
     }
 `;
