@@ -39,6 +39,7 @@ const Input = props => (
                     className='dragger'
                     type='range'
                     min='1'
+                    defaultValue='3'
                     max='5'
                     step='1'
                     list='ticks'
