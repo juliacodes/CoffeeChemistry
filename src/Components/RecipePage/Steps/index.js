@@ -16,7 +16,7 @@ const Steps = props => (
                 </Step>
                 <Step>
                     <p>3.</p>
-                    <p>First Pour</p>
+                    <p>Bloom - First Pour</p>
                     <p>400g</p>
                 </Step>
                 <Step>

@@ -122,16 +122,12 @@ export const InputWrapper = styled.div`
 
     #ticks {
         display: flex;
-        width: 85%;
+        width: 100%;
         justify-content: space-between;
         color: ${COLORS.darkPurple};
 
         option {
             display: block;
-            width: 30px;
-            @media only screen and (min-width: 959px) {
-                width: unset;
-            }
 
             &#weak,
             &#med,
@@ -154,8 +150,6 @@ export const InputWrapper = styled.div`
         }
 
         @media only screen and (min-width: 959px) {
-            justify-content: space-between;
-            width: 100%;
             option:nth-child(2n + 2) {
                 display: block;
             }
