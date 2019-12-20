@@ -7,15 +7,30 @@ export default class Input extends Component {
 
         this.state = {
             serving: 1,
-            grounds: 15
+            strength: 15,
+            grounds: 15,
+            water: 225
         };
-        this.handleChange = this.handleChange.bind(this);
+        this.servingChange = this.servingChange.bind(this);
+        this.strengthChange = this.strengthChange.bind(this);
     }
 
-    handleChange(e) {
+    servingChange(e) {
+        let grounds = e.target.valueAsNumber * this.state.strength;
         this.setState({
-            serving: e.target.value,
-            grounds: e.target.value * 15
+            serving: e.target.valueAsNumber,
+            grounds: grounds,
+            water: grounds * this.state.strength
+        });
+    }
+
+    strengthChange(e) {
+        let strength = e.target.valueAsNumber + 12;
+        let grounds = this.state.serving * strength;
+        this.setState({
+            strength: strength,
+            grounds: grounds,
+            water: grounds * strength
         });
     }
 
@@ -32,7 +47,7 @@ export default class Input extends Component {
                     <br />
                     <input
                         value={this.state.serving}
-                        onChange={this.handleChange}
+                        onChange={this.servingChange}
                         className='num-input'
                         type='number'
                         name='name'
@@ -63,7 +78,9 @@ export default class Input extends Component {
                             max='5'
                             step='1'
                             list='ticks'
+                            onChange={this.strengthChange}
                         />
+                        <p>{this.state.strength}</p>
                     </InputWrapper>
                 </form>
                 <form>
@@ -87,7 +104,7 @@ export default class Input extends Component {
                         className='disabled num-input'
                         type='text'
                         name='name'
-                        value='400g'
+                        value={this.state.water}
                     />
                 </form>
                 <form>
