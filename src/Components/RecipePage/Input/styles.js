@@ -19,6 +19,10 @@ export const Inputs = styled.div`
         margin: 0 auto;
         position: relative;
 
+        label {
+            display: none;
+        }
+
         .drag-legend {
             top: 60px;
         }

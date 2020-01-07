@@ -41,7 +41,7 @@ export default class Input extends Component {
                     <legend>
                         Servings <u>Edit</u>
                     </legend>
-                    <label style={{ display: 'none' }}>
+                    <label>
                         Servings <u>Edit</u>
                     </label>
                     <br />
@@ -57,7 +57,7 @@ export default class Input extends Component {
                     <legend className='drag-legend'>
                         Strength <u>Edit</u>
                     </legend>
-                    <label style={{ display: 'none' }}>Strength</label>
+                    <label>Strength</label>
                     <br />
                     <br />
                     <InputWrapper>
@@ -85,7 +85,7 @@ export default class Input extends Component {
                 </form>
                 <form>
                     <legend>Temperature</legend>
-                    <label style={{ display: 'none' }}>Temperature</label>
+                    <label>Temperature</label>
                     <br />
                     <input
                         disabled
@@ -97,7 +97,7 @@ export default class Input extends Component {
                 </form>
                 <form>
                     <legend>Total Water</legend>
-                    <label style={{ display: 'none' }}>Total Water</label>
+                    <label>Total Water</label>
                     <br />
                     <input
                         disabled
@@ -109,7 +109,7 @@ export default class Input extends Component {
                 </form>
                 <form>
                     <legend>Coffee Grounds</legend>
-                    <label style={{ display: 'none' }}>Coffee Grounds</label>
+                    <label>Coffee Grounds</label>
                     <br />
                     <input
                         disabled
@@ -121,7 +121,7 @@ export default class Input extends Component {
                 </form>
                 <form>
                     <legend>Equipment</legend>
-                    <label style={{ display: 'none' }}>Coffee Grounds</label>
+                    <label>Coffee Grounds</label>
                     <br />
                     <p>{this.props.ingredients}</p>
                 </form>
