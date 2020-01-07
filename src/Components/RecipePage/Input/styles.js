@@ -102,6 +102,7 @@ export const InputWrapper = styled.div`
         -webkit-appearance: none;
         background-color: transparent;
         outline: none;
+        direction: rtl;
     }
 
     input[type='range']::-webkit-slider-runnable-track {

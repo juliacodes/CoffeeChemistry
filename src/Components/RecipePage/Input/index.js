@@ -20,17 +20,18 @@ export default class Input extends Component {
         this.setState({
             serving: e.target.valueAsNumber,
             grounds: grounds,
-            water: grounds * this.state.strength
+            water: 225 * e.target.valueAsNumber
         });
     }
 
     strengthChange(e) {
-        let strength = e.target.valueAsNumber + 12;
+        let strength = Math.round(
+            this.state.water / (e.target.valueAsNumber + 12)
+        );
         let grounds = this.state.serving * strength;
         this.setState({
             strength: strength,
-            grounds: grounds,
-            water: grounds * strength
+            grounds: grounds
         });
     }
 
@@ -80,7 +81,6 @@ export default class Input extends Component {
                             list='ticks'
                             onChange={this.strengthChange}
                         />
-                        <p>{this.state.strength}</p>
                     </InputWrapper>
                 </form>
                 <form>
@@ -104,7 +104,7 @@ export default class Input extends Component {
                         className='disabled num-input'
                         type='text'
                         name='name'
-                        value={this.state.water}
+                        value={this.state.water + 'g'}
                     />
                 </form>
                 <form>
@@ -116,7 +116,7 @@ export default class Input extends Component {
                         className='disabled num-input'
                         type='text'
                         name='name'
-                        value={this.state.grounds}
+                        value={this.state.grounds + 'g'}
                     />
                 </form>
                 <form>
