@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { QUERIES, COLORS } from '../../../Styling';
-import bean from '../../../Images/bean.jpg';
+import bean from '../../../Images/bean.png';
 
 export const Inputs = styled.div`
     padding: 80px 0 50px 0;
