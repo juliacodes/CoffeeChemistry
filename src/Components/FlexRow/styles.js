@@ -15,7 +15,7 @@ export const FlexRowCont = styled.div`
 
 export const Left = styled.div`
     width: 100%;
-    padding: 100px 30px;
+    padding: 150px 30px;
     background-color: ${props =>
         props.backgroundColor || `${COLORS.lightBlue}`};
     display: flex;
