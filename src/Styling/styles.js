@@ -7,6 +7,7 @@ export const QUERIES = {
 };
 
 export const COLORS = {
+    lightGray: '#9E9E9E',
     lightBlue: '#E7F0FE',
     darkBlue: '#3A3578',
     lightPink: '#FAF1EF',
@@ -38,23 +39,30 @@ export const Outer = styled(Inner)`
 `;
 
 export const Heading = styled.h1`
-    font-size: 35px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: ${COLORS.darkBlue};
+    font-family: Michroma;
+    font-size: 30px;
+    max-width: 700px;
+    line-height: 149%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.1em;
 `;
 
 export const SmallHeading = styled.h2`
-    font-size: 25px;
-    color: ${COLORS.darkBlue};
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    font-weight: 300;
+    font-family: Michroma;
+    font-size: 18px;
+    max-width: 700px;
+    line-height: 149%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.1em;
 `;
 
 export const Paragraph = styled.p`
     font-size: 13px;
-    color: ${COLORS.darkBlue};
+    color: ${COLORS.lightGray};
     font-size: 13px;
     line-height: 117%;
     letter-spacing: 0.14em;
@@ -108,4 +116,9 @@ export const Button = styled.button`
 
         height: 100%;
     }
+`;
+
+export const Spacing = styled.div`
+    display: flex;
+    margin: 200px auto 0 auto;
 `;

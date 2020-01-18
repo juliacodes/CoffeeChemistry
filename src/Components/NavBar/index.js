@@ -28,13 +28,9 @@ export default class Navbar extends React.Component {
         // );
         // const windowBottom = windowHeight + window.pageYOffset;
 
-        if (window.pageYOffset <= 50) {
+        if (window.pageYOffset >= 10) {
             this.setState({
-                scroll: false
-            });
-        } else {
-            this.setState({
-                scroll: true
+                scroll: window.pageYOffset / 4
             });
         }
     }
@@ -44,26 +40,22 @@ export default class Navbar extends React.Component {
     }
 
     render() {
-        const { scroll } = this.state;
         return (
-            <NavBarCont
-                style={
-                    scroll
-                        ? {
-                              boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)'
-                          }
-                        : {}
-                }
-            >
+            <NavBarCont>
                 <Inner>
+                    <Link to='/guides'>Guides</Link>
                     <Link to='/'>
-                        <Logo src={logo} alt={logo} />
+                        <Logo
+                            style={{
+                                transform:
+                                    'rotate(' + this.state.scroll + 'deg)'
+                            }}
+                            src={logo}
+                            alt={logo}
+                        />
                     </Link>
-                    <NavLinks>
-                        <Link to='/about'>about</Link>
-                        <Link to='/guides'>guides</Link>
-                        <Link to='/recipes'>recipes</Link>
-                    </NavLinks>
+
+                    <Link to='/recipes'>recipes</Link>
                 </Inner>
             </NavBarCont>
         );

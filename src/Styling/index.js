@@ -2,6 +2,7 @@ export {
     QUERIES,
     COLORS,
     Container,
+    Spacing,
     Inner,
     Outer,
     Heading,
