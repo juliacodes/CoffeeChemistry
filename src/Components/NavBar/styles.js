@@ -46,4 +46,8 @@ export const Inner = styled.div`
 export const Logo = styled.img`
     width: 95.03px;
     height: 95px;
+
+    :hover {
+        border-bottom: none;
+    }
 `;

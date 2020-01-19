@@ -96,7 +96,7 @@ export default class Navbar extends React.Component {
                         style={{
                             color: this.state.color
                         }}
-                        to='/recipes'
+                        to='/#recipes'
                     >
                         recipes
                     </Link>

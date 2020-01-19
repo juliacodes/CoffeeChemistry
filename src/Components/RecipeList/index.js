@@ -4,20 +4,20 @@ import { RecipeListCont, Option } from './styles';
 
 const RecipeList = () => (
     <RecipeListCont>
-        <Link to='/chemex'>
-            <Option className='wave'>Chemex</Option>
+        <Link className='chemex' to='/chemex'>
+            <Option>Chemex</Option>
         </Link>
-        <Link to='/french'>
-            <Option className='wave'>french press</Option>
+        <Link className='frenchpress' to='/french'>
+            <Option>french press</Option>
         </Link>
-        <Link to='/aeropress'>
-            <Option className='wave'>aeropress</Option>
+        <Link className='aeropress' to='/aeropress'>
+            <Option>aeropress</Option>
         </Link>
-        <Link to='/espresso'>
-            <Option className='wave'>espresso</Option>
+        <Link className='espresso' to='/espresso'>
+            <Option>espresso</Option>
         </Link>
-        <Link to='/pourover'>
-            <Option className='wave'>pourover</Option>
+        <Link className='pourover' to='/pourover'>
+            <Option>pourover</Option>
         </Link>
     </RecipeListCont>
 );

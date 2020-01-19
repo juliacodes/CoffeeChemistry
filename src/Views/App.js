@@ -15,7 +15,7 @@ function App() {
                     </Heading>
                 </Spacing>
                 <Spacing>
-                    <RecipeList />
+                    <RecipeList id='recipes' />
                 </Spacing>
             </Inner>
             <Spacing style={{ width: '100%' }}>

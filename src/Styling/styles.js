@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const QUERIES = {
     medium: `min-width: 1092px`,
@@ -72,4 +72,29 @@ export const Break = styled.span`
 export const Spacing = styled.div`
     display: flex;
     margin: 200px auto 0 auto;
+`;
+
+export const WaveAnim = keyframes`
+  0% {
+    background-position-y: 85px;
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-y: 0px;
+    background-position-x: -200px;
+
+  }
+`;
+
+export const WaveAnimRev = keyframes`
+  0% {
+    background-position-y: 0px;
+    background-position-x: -200px;
+  }
+
+  100% {
+    background-position-y: 85px;
+    background-position-x: 0;
+  }
 `;

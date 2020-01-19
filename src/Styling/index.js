@@ -7,5 +7,7 @@ export {
     Heading,
     SmallHeading,
     Paragraph,
-    Break
+    Break,
+    WaveAnim,
+    WaveAnimRev
 } from './styles';
