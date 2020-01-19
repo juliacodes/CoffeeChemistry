@@ -45,14 +45,3 @@ export const MainImage = styled.img`
         width: 60%;
     }
 `;
-
-export const Enjoy = styled.div`
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    ${SmallHeading} {
-        margin: 0;
-    }
-`;
