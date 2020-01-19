@@ -34,10 +34,6 @@ export const Inner = styled.div`
     align-items: center;
 `;
 
-export const Outer = styled(Inner)`
-    max-width: unset;
-`;
-
 export const Heading = styled.h1`
     font-family: Michroma;
     font-size: 30px;
@@ -71,51 +67,6 @@ export const Paragraph = styled.p`
 
 export const Break = styled.span`
     flex-basis: 100%;
-`;
-
-export const Button = styled.button`
-    border: none;
-    font-family: 'Muli', sans-serif;
-    position: relative;
-    text-transform: uppercase;
-    outline: none;
-    width: 140px;
-    padding: 8px;
-    background: transparent;
-    font-size: 12px;
-    letter-spacing: 0.24em;
-    line-height: 17px;
-    color: ${COLORS.darkBlue};
-    border: 0.5px solid ${COLORS.darkBlue};
-    margin-top: 20px;
-    cursor: pointer;
-    transition-duration: 0.3s;
-    z-index: 1;
-
-    :hover {
-        color: white !important;
-    }
-
-    :after {
-        position: absolute;
-        opacity: 0;
-        bottom: 0;
-        left: 0;
-        display: block;
-        content: '';
-        width: 140px;
-        height: 0;
-        background-color: ${COLORS.darkBlue};
-        transition-duration: 0.3s;
-        z-index: -1;
-    }
-
-    :hover:after {
-        opacity: 1;
-        z-index: -3;
-
-        height: 100%;
-    }
 `;
 
 export const Spacing = styled.div`
