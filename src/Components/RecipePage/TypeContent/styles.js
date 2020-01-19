@@ -1,5 +1,10 @@
 import styled from 'styled-components';
-import { Inner, QUERIES } from '../../../Styling';
+import { Inner, QUERIES, Container } from '../../../Styling';
+
+export const ContainerMin = styled(Container)`
+    height: auto;
+    margin: 200px 0;
+`;
 
 export const RecipeFlexCont = styled.div`
     display: flex;
@@ -12,10 +17,9 @@ export const RecipeFlexCont = styled.div`
 export const InnerPadding = styled(Inner)`
     justify-content: unset;
     align-items: unset;
-    height: 500px;
-    padding: 50px 30px;
+    padding: 0px 20px;
 
     @media (${QUERIES.medium}) {
-        padding: 150px 50px;
+        padding: 0px 50px;
     }
 `;

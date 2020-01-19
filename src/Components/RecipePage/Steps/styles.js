@@ -8,11 +8,10 @@ export const StepsCont = styled.div`
     text-align: center;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
+    background-color: black;
 
     @media (${QUERIES.medium}) {
-        width: 50%;
-        margin-top: 100px;
+        width: 35%;
     }
 `;
 
@@ -25,29 +24,36 @@ export const Step = styled.div`
 
     p {
         text-transform: uppercase;
-        font-weight: 900;
-        font-size: 15px;
+        font-family: 'Lato', sans-serif;
+        font-style: italic;
+        font-size: 20px;
         line-height: 117%;
-        letter-spacing: 0.2em;
-        color: ${COLORS.lightPurple};
+        text-transform: capitalize;
+        color: #3e3e3e;
         padding: 0;
         margin: 10px auto;
         width: fit-content;
         text-align: center;
 
         &:nth-child(2) {
-            font-size: 20px;
-            color: ${COLORS.darkPurple};
-            border-bottom: 1px solid ${COLORS.darkPurple};
+            font-weight: normal;
+            font-size: 17px;
+            line-height: 117%;
+            color: white;
+            text-align: center;
+            letter-spacing: 0.2em;
             text-transform: capitalize;
         }
 
         &:nth-child(3) {
-            text-align: center;
-            font-size: 40px;
+            margin-top: 15px;
+            font-family: 'Michroma', sans-serif;
+            font-style: normal;
+            font-size: 26px;
+            line-height: 117%;
             letter-spacing: 0.2em;
             text-transform: capitalize;
-            color: ${COLORS.darkPurple};
+            color: white;
         }
     }
 `;

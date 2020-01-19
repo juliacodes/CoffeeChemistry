@@ -45,7 +45,6 @@ export default class Input extends Component {
                     <label>
                         Servings <u>Edit</u>
                     </label>
-                    <br />
                     <input
                         value={this.state.serving}
                         onChange={this.servingChange}
@@ -59,8 +58,6 @@ export default class Input extends Component {
                         Strength <u>Edit</u>
                     </legend>
                     <label>Strength</label>
-                    <br />
-                    <br />
                     <InputWrapper>
                         <datalist id='ticks'>
                             <option id='weak'></option>
@@ -86,7 +83,6 @@ export default class Input extends Component {
                 <form>
                     <legend>Temperature</legend>
                     <label>Temperature</label>
-                    <br />
                     <input
                         disabled
                         className='disabled num-input'
@@ -98,7 +94,6 @@ export default class Input extends Component {
                 <form>
                     <legend>Total Water</legend>
                     <label>Total Water</label>
-                    <br />
                     <input
                         disabled
                         className='disabled num-input'
@@ -110,7 +105,6 @@ export default class Input extends Component {
                 <form>
                     <legend>Coffee Grounds</legend>
                     <label>Coffee Grounds</label>
-                    <br />
                     <input
                         disabled
                         className='disabled num-input'
@@ -122,7 +116,6 @@ export default class Input extends Component {
                 <form>
                     <legend>Equipment</legend>
                     <label>Coffee Grounds</label>
-                    <br />
                     <p>{this.props.ingredients}</p>
                 </form>
             </Inputs>
