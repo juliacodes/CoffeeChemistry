@@ -17,7 +17,7 @@ function App() {
             >
                 <Spacing>
                     <Heading>
-                        Working to make brewing the perfect cup of coffee easy.
+                        Built to make brewing the perfect cup of coffee easy.
                     </Heading>
                 </Spacing>
                 <Spacing>

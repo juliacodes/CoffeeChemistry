@@ -1,18 +1,29 @@
 import React, { Component } from 'react';
 import { Inputs, InputWrapper } from './styles';
-
+import Odometer from 'react-odometerjs';
 export default class Input extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            serving: 1,
+            serving: 0,
             strength: 15,
-            grounds: 15,
-            water: 225
+            grounds: 0,
+            water: 0,
+            temp: 0
         };
         this.servingChange = this.servingChange.bind(this);
         this.strengthChange = this.strengthChange.bind(this);
+    }
+
+    componentDidMount() {
+        this.setState({
+            serving: 1,
+            strength: 15,
+            grounds: 15,
+            water: 225,
+            temp: 200
+        });
     }
 
     servingChange(e) {
@@ -36,6 +47,7 @@ export default class Input extends Component {
     }
 
     render() {
+        const { serving, strength, temp, grounds, water } = this.state;
         return (
             <Inputs>
                 <form>
@@ -46,7 +58,7 @@ export default class Input extends Component {
                         Servings <u>Edit</u>
                     </label>
                     <input
-                        value={this.state.serving}
+                        value={serving}
                         onChange={this.servingChange}
                         className='num-input'
                         type='number'
@@ -83,35 +95,20 @@ export default class Input extends Component {
                 <form>
                     <legend>Temperature</legend>
                     <label>Temperature</label>
-                    <input
-                        disabled
-                        className='disabled num-input'
-                        type='text'
-                        name='name'
-                        value='200˚F'
-                    />
+                    <Odometer format='d' duration={500} value={temp} />
+                    <span>˚F</span>
                 </form>
                 <form>
                     <legend>Total Water</legend>
                     <label>Total Water</label>
-                    <input
-                        disabled
-                        className='disabled num-input'
-                        type='text'
-                        name='name'
-                        value={this.state.water + 'g'}
-                    />
+                    <Odometer format='d' duration={500} value={water} />
+                    <span>g</span>
                 </form>
                 <form>
                     <legend>Coffee Grounds</legend>
                     <label>Coffee Grounds</label>
-                    <input
-                        disabled
-                        className='disabled num-input'
-                        type='text'
-                        name='name'
-                        value={this.state.grounds + 'g'}
-                    />
+                    <Odometer format='d' duration={500} value={grounds} />
+                    <span>g</span>
                 </form>
                 <form>
                     <legend>Equipment</legend>
