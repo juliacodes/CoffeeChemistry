@@ -24,6 +24,16 @@ export const Inner = styled.div`
         padding: 20px 50px;
     }
 
+    .Logo {
+        margin-left: auto;
+        margin-right: auto;
+        border-bottom: none;
+        :hover {
+            border-bottom: none;
+            transform: scale(0.8);
+        }
+    }
+
     a {
         text-align: center;
         text-transform: capitalize;
@@ -39,7 +49,7 @@ export const Inner = styled.div`
         padding-bottom: 2px;
 
         :hover {
-            border-bottom: 1px solid ${COLORS.darkBlue};
+            border-bottom: 1px solid black;
         }
     }
 `;
@@ -47,8 +57,4 @@ export const Inner = styled.div`
 export const Logo = styled.img`
     width: 95.03px;
     height: 95px;
-
-    :hover {
-        border-bottom: none;
-    }
 `;

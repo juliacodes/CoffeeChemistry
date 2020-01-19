@@ -7,7 +7,7 @@ import chemexLarge from '../Images/chemexLarge.png';
 function Chemex() {
     return (
         <Container>
-            <NavBar />
+            <NavBar type='simple' />
             <Inner>
                 <TypeContent
                     type='Chemex'

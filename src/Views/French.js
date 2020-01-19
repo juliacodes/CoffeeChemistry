@@ -7,7 +7,7 @@ import frenchLarge from '../Images/frenchLarge.png';
 function French() {
     return (
         <Container>
-            <NavBar />
+            <NavBar type='simple' />
             <Inner>
                 <TypeContent
                     type='French Press'

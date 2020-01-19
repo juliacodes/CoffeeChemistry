@@ -16,22 +16,6 @@ export default class Navbar extends React.Component {
     }
 
     handleScroll() {
-        // ADD IF YOU NEED BOTTOM
-        // const windowHeight =
-        //     'innerHeight' in window
-        //         ? window.innerHeight
-        //         : document.documentElement.offsetHeight;
-        // const { body } = document;
-        // const html = document.documentElement;
-        // const docHeight = Math.max(
-        //     body.scrollHeight,
-        //     body.offsetHeight,
-        //     html.clientHeight,
-        //     html.scrollHeight,
-        //     html.offsetHeight
-        // );
-        // const windowBottom = windowHeight + window.pageYOffset;
-
         if (window.pageYOffset >= 10) {
             this.setState({
                 scroll: window.pageYOffset / 4
@@ -61,15 +45,18 @@ export default class Navbar extends React.Component {
         return (
             <NavBarCont>
                 <Inner>
-                    <Link
-                        style={{
-                            color: this.state.color
-                        }}
-                        to='/guides'
-                    >
-                        Guides
-                    </Link>
-                    <Link to='/'>
+                    {this.props.type !== 'simple' && (
+                        <Link
+                            style={{
+                                color: this.state.color
+                            }}
+                            to='/guides'
+                        >
+                            Guides
+                        </Link>
+                    )}
+
+                    <Link className='Logo' to='/'>
                         {!this.state.imageBlack && (
                             <Logo
                                 style={{
@@ -91,15 +78,16 @@ export default class Navbar extends React.Component {
                             />
                         )}
                     </Link>
-
-                    <Link
-                        style={{
-                            color: this.state.color
-                        }}
-                        to='/#recipes'
-                    >
-                        recipes
-                    </Link>
+                    {this.props.type !== 'simple' && (
+                        <Link
+                            style={{
+                                color: this.state.color
+                            }}
+                            to='/#recipes'
+                        >
+                            recipes
+                        </Link>
+                    )}
                 </Inner>
             </NavBarCont>
         );
