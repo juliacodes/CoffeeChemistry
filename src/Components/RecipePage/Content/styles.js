@@ -5,7 +5,6 @@ export const RecipeCont = styled.div`
     width: 100%;
     align-items: top;
     justify-content: center;
-    transform: translateY(-100px);
     position: relative;
     z-index: 0;
     flex-wrap: wrap;

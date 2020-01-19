@@ -35,6 +35,7 @@ export const Inner = styled.div`
         transition-duration: 0.3s;
         border-bottom: 1px solid transparent;
         padding: 0;
+        margin-left: 0;
         padding-bottom: 2px;
 
         :hover {
