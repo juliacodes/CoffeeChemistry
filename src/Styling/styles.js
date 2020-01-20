@@ -21,6 +21,8 @@ export const Container = styled.div`
     width: 100vw;
     background-color: white;
     height: auto;
+    opacity: 1;
+    z-index: 3;
 `;
 
 export const Inner = styled.div`

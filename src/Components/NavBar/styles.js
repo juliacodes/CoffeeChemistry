@@ -57,9 +57,10 @@ export const Inner = styled.div`
         margin-left: 0;
         padding-bottom: 2px;
         display: none;
+        height: 30px;
 
         @media (${QUERIES.medium}) {
-            display: block;
+            display: unset;
         }
 
         :hover {
