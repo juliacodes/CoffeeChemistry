@@ -1,39 +1,32 @@
 import React from 'react';
-import { Container, Inner, Heading, Spacing } from '../Styling';
+import {
+    Container,
+    InnerLanding,
+    Heading,
+    Spacing,
+    FixedSpacing
+} from '../Styling';
 import NavBar from '../Components/NavBar';
 import RecipeList from '../Components/RecipeList';
 import Guides from '../Components/Guides';
 
 function App() {
     return (
-        <Container style={{ backgroundColor: 'white', height: 'auto' }}>
+        <Container>
             <NavBar />
-            <Inner
-                style={{
-                    padding: '183px 0 200px 0',
-                    zIndex: 5,
-                    marginBottom: 800
-                }}
-            >
+            <InnerLanding>
                 <Spacing>
                     <Heading>
                         Built to make brewing the perfect cup of coffee easy.
                     </Heading>
                 </Spacing>
                 <Spacing>
-                    <RecipeList id='recipes' />
+                    <RecipeList />
                 </Spacing>
-            </Inner>
-            <Spacing
-                style={{
-                    width: '100vw',
-                    position: 'fixed',
-                    zIndex: -99,
-                    bottom: 0
-                }}
-            >
+            </InnerLanding>
+            <FixedSpacing>
                 <Guides />
-            </Spacing>
+            </FixedSpacing>
         </Container>
     );
 }

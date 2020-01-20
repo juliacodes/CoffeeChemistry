@@ -19,7 +19,8 @@ export const COLORS = {
 
 export const Container = styled.div`
     width: 100vw;
-    height: 100vh;
+    background-color: white;
+    height: auto;
 `;
 
 export const Inner = styled.div`
@@ -32,6 +33,12 @@ export const Inner = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+`;
+
+export const InnerLanding = styled(Inner)`
+    padding: 183px 0 200px 0;
+    z-index: 5;
+    margin-bottom: 800px;
 `;
 
 export const Heading = styled.h1`
@@ -72,6 +79,13 @@ export const Break = styled.span`
 export const Spacing = styled.div`
     display: flex;
     margin: 200px auto 0 auto;
+`;
+
+export const FixedSpacing = styled(Spacing)`
+    width: 100vw;
+    position: fixed;
+    z-index: -99;
+    bottom: 0;
 `;
 
 export const WaveAnim = keyframes`
