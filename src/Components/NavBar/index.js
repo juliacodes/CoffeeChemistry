@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 import React from 'react';
 import { NavBarCont, Logo, Inner } from './styles';
 import logo from '../../Images/logo.png';
@@ -9,32 +10,28 @@ export default class Navbar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            scroll: 'false',
+            scroll: 0,
             color: 'black',
             imageBlack: false
         };
     }
 
     handleScroll() {
-        if (window.pageYOffset >= 10) {
-            this.setState({
-                scroll: window.pageYOffset / 4
-            });
+        window.pageYOffset >= 10
+            ? this.setState({
+                  scroll: window.pageYOffset / 4
+              })
+            : null;
 
-            console.log(window.pageYOffset);
-        }
-
-        if (window.pageYOffset >= 1530) {
-            this.setState({
-                color: 'white',
-                imageBlack: true
-            });
-        } else {
-            this.setState({
-                color: 'black',
-                imageBlack: false
-            });
-        }
+        window.pageYOffset >= 1530
+            ? this.setState({
+                  color: 'white',
+                  imageBlack: true
+              })
+            : this.setState({
+                  color: 'black',
+                  imageBlack: false
+              });
     }
 
     componentDidMount() {

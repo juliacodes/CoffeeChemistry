@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './Views/App';
-import Chemex from './Views/Chemex';
 import ScrollToTop from './Handler/ScrollToTop';
 import * as serviceWorker from './serviceWorker';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
+import App from './Views/App';
+import Chemex from './Views/Chemex';
 import French from './Views/French';
 import Aeropress from './Views/Aeropress';
 import Espresso from './Views/Espresso';
