@@ -38,7 +38,7 @@ export const Inner = styled.div`
 export const InnerLanding = styled(Inner)`
     padding: 83px 0 100px 0;
     z-index: 5;
-    margin-bottom: 800px;
+    margin-bottom: 670px;
 
     @media (${QUERIES.medium}) {
         padding: 183px 0 200px 0;
