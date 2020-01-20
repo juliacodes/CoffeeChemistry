@@ -4,7 +4,6 @@ import Odometer from 'react-odometerjs';
 export default class Input extends Component {
     constructor(props) {
         super(props);
-
         this.state = {
             serving: 0,
             strength: 15,
@@ -47,7 +46,7 @@ export default class Input extends Component {
     }
 
     render() {
-        const { serving, strength, temp, grounds, water } = this.state;
+        const { serving, temp, grounds, water } = this.state;
         return (
             <Inputs>
                 <form>
@@ -91,6 +90,17 @@ export default class Input extends Component {
                             onChange={this.strengthChange}
                         />
                     </InputWrapper>
+                </form>
+                <form>
+                    <legend>Grind</legend>
+                    <label>Grind</label>
+                    <input
+                        disabled
+                        className='disabled num-input'
+                        type='text'
+                        name='name'
+                        value='Med-Course'
+                    />
                 </form>
                 <form>
                     <legend>Temperature</legend>

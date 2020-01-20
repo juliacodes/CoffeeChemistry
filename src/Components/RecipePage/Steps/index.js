@@ -76,6 +76,129 @@ const Steps = props => (
                 </Step>
             </>
         )}
+
+        {props.steps === 'aeropress' && (
+            <>
+                <Step>
+                    <p>1.</p>
+                    <p>Rinse Carafe with Hot Water</p>
+                </Step>
+                <Step>
+                    <p>2.</p>
+                    <p>Add Coffee into Press</p>
+                    <p>400g</p>
+                </Step>
+                <Step>
+                    <p>3.</p>
+                    <p>Pre Infusion</p>
+                    <p>100g</p>
+                </Step>
+                <Step>
+                    <p>4.</p>
+                    <p>Let Rest 30 sec</p>
+                </Step>
+                <Step>
+                    <p>4.</p>
+                    <p>Stir</p>
+                </Step>
+
+                <Step>
+                    <p>5.</p>
+                    <p>Final Pour</p>
+                    <p>100g</p>
+                </Step>
+                <Step>
+                    <p>6.</p>
+                    <p>Let Rest 4 mins</p>
+                </Step>
+                <Step>
+                    <p>7.</p>
+                    <p>Slowly Press</p>
+                </Step>
+            </>
+        )}
+
+        {props.steps === 'espresso' && (
+            <>
+                <Step>
+                    <p>1.</p>
+                    <p>Rinse Carafe with Hot Water</p>
+                </Step>
+                <Step>
+                    <p>2.</p>
+                    <p>Add Coffee into Press</p>
+                    <p>400g</p>
+                </Step>
+                <Step>
+                    <p>3.</p>
+                    <p>Pre Infusion</p>
+                    <p>100g</p>
+                </Step>
+                <Step>
+                    <p>4.</p>
+                    <p>Let Rest 30 sec</p>
+                </Step>
+                <Step>
+                    <p>4.</p>
+                    <p>Stir</p>
+                </Step>
+
+                <Step>
+                    <p>5.</p>
+                    <p>Final Pour</p>
+                    <p>100g</p>
+                </Step>
+                <Step>
+                    <p>6.</p>
+                    <p>Let Rest 4 mins</p>
+                </Step>
+                <Step>
+                    <p>7.</p>
+                    <p>Slowly Press</p>
+                </Step>
+            </>
+        )}
+
+        {props.steps === 'pourover' && (
+            <>
+                <Step>
+                    <p>1.</p>
+                    <p>Rinse Carafe with Hot Water</p>
+                </Step>
+                <Step>
+                    <p>2.</p>
+                    <p>Add Coffee into Press</p>
+                    <p>400g</p>
+                </Step>
+                <Step>
+                    <p>3.</p>
+                    <p>Pre Infusion</p>
+                    <p>100g</p>
+                </Step>
+                <Step>
+                    <p>4.</p>
+                    <p>Let Rest 30 sec</p>
+                </Step>
+                <Step>
+                    <p>4.</p>
+                    <p>Stir</p>
+                </Step>
+
+                <Step>
+                    <p>5.</p>
+                    <p>Final Pour</p>
+                    <p>100g</p>
+                </Step>
+                <Step>
+                    <p>6.</p>
+                    <p>Let Rest 4 mins</p>
+                </Step>
+                <Step>
+                    <p>7.</p>
+                    <p>Slowly Press</p>
+                </Step>
+            </>
+        )}
     </StepsCont>
 );
 

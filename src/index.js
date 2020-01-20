@@ -7,6 +7,9 @@ import ScrollToTop from './Handler/ScrollToTop';
 import * as serviceWorker from './serviceWorker';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import French from './Views/French';
+import Aeropress from './Views/Aeropress';
+import Espresso from './Views/Espresso';
+import Pourover from './Views/Pourover';
 
 const routing = (
     <BrowserRouter>
@@ -15,6 +18,9 @@ const routing = (
                 <Route exact path='/' component={App} />
                 <Route path='/chemex' component={Chemex} />
                 <Route path='/french' component={French} />
+                <Route path='/aeropress' component={Aeropress} />
+                <Route path='/espresso' component={Espresso} />
+                <Route path='/pourover' component={Pourover} />
             </Switch>
         </ScrollToTop>
     </BrowserRouter>

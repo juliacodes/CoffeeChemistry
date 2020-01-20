@@ -9,12 +9,12 @@ const TypeContent = props => (
             <InnerPadding>
                 <ContainerMin>
                     <Heading>Brewing with {props.type}</Heading>
-                    <Paragraph style={{ maxWidth: '50%' }}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Convallis in tempor velit in egestas cursus volutpat
-                        ullamcorper. Non posuere purus ullamcorper in feugiat.
-                        Cursus aliquam placerat egestas amet in vitae mattis
-                        cras in.
+                    <Paragraph style={{ maxWidth: '800px' }}>
+                        {props.paragraph}
+                    </Paragraph>
+                    <Paragraph style={{ color: 'black' }}>
+                        Flavor types: <span>{props.flavor1}</span>
+                        <span>{props.flavor2}</span>
                     </Paragraph>
                 </ContainerMin>
                 <Content steps={props.steps} ingredients={props.ingredients} />

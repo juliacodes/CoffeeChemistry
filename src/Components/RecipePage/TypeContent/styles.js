@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Inner, QUERIES, Container } from '../../../Styling';
+import { Inner, QUERIES, Container, Paragraph } from '../../../Styling';
 
 export const ContainerMin = styled(Container)`
     height: auto;
@@ -21,5 +21,19 @@ export const InnerPadding = styled(Inner)`
 
     @media (${QUERIES.medium}) {
         padding: 0px 50px;
+    }
+
+    ${Paragraph} {
+        margin: 40px 0;
+        span {
+            font-family: 'Lato', sans-serif;
+            font-style: italic;
+            font-size: 12px;
+            line-height: 117%;
+            letter-spacing: 0.2em;
+            margin: 0 5px;
+            padding: 5px 10px;
+            background-color: #f0f0f0;
+        }
     }
 `;

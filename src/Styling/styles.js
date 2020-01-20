@@ -60,9 +60,9 @@ export const Paragraph = styled.p`
     font-size: 13px;
     color: ${COLORS.lightGray};
     font-size: 13px;
-    line-height: 117%;
-    letter-spacing: 0.14em;
-    text-transform: lowercase;
+    line-height: 190%;
+    letter-spacing: 0.05em;
+    padding-right: 30px;
 `;
 
 export const Break = styled.span`
