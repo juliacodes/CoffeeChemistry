@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { QUERIES, COLORS } from '../../Styling';
+import { QUERIES } from '../../Styling';
 
 export const NavBarCont = styled.div`
     display: flex;

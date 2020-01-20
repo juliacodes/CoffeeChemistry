@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavBarCont, NavLinks, Logo, Inner } from './styles';
+import { NavBarCont, Logo, Inner } from './styles';
 import logo from '../../Images/logo.png';
 import logoWhite from '../../Images/logoWhite.png';
 
