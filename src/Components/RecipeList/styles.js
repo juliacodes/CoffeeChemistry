@@ -5,6 +5,7 @@ import { WaveAnim, WaveAnimRev } from '../../Styling';
 export const RecipeListCont = styled.div`
     justify-content: center;
     text-align: center;
+    user-select: none;
 
     a {
         display: flex;
