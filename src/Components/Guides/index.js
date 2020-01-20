@@ -1,31 +1,35 @@
 import React from 'react';
-import { GuidesCont, FlexRow, Column } from './styles';
-import { SmallHeading, Paragraph } from '../../Styling';
+import {
+    GuidesCont,
+    FlexRow,
+    Column,
+    SmallHeadingGuides,
+    SmallerHeadingGuides
+} from './styles';
+import { Paragraph } from '../../Styling';
 
 function Guides() {
     return (
         <GuidesCont>
-            <SmallHeading
-                style={{ color: 'white', margin: '0 auto 100px auto' }}
-            >
+            <SmallHeadingGuides>
                 Really good coffee is complex and confusing for a new brewer,
                 but it doesn’t have to be. Explore our guides to learn
                 everything you’ll need.
-            </SmallHeading>
+            </SmallHeadingGuides>
             <FlexRow>
                 <Column>
-                    <SmallHeading style={{ color: 'white' }}>
+                    <SmallerHeadingGuides style={{ color: 'white' }}>
                         Coffee Origins
-                    </SmallHeading>
+                    </SmallerHeadingGuides>
                     <Paragraph>
                         Explore the originals and flavor types of different
                         beans
                     </Paragraph>
                 </Column>
                 <Column>
-                    <SmallHeading style={{ color: 'white' }}>
+                    <SmallerHeadingGuides style={{ color: 'white' }}>
                         Coffee Origins
-                    </SmallHeading>{' '}
+                    </SmallerHeadingGuides>{' '}
                     <Paragraph>
                         Explore the originals and flavor types of different
                         beans
@@ -34,18 +38,18 @@ function Guides() {
             </FlexRow>
             <FlexRow>
                 <Column>
-                    <SmallHeading style={{ color: 'white' }}>
+                    <SmallerHeadingGuides style={{ color: 'white' }}>
                         Coffee Origins
-                    </SmallHeading>
+                    </SmallerHeadingGuides>
                     <Paragraph>
                         Explore the originals and flavor types of different
                         beans
                     </Paragraph>
                 </Column>
                 <Column>
-                    <SmallHeading style={{ color: 'white' }}>
+                    <SmallerHeadingGuides style={{ color: 'white' }}>
                         Coffee Origins
-                    </SmallHeading>{' '}
+                    </SmallerHeadingGuides>{' '}
                     <Paragraph>
                         Explore the originals and flavor types of different
                         beans

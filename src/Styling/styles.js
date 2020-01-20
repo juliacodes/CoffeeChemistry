@@ -36,9 +36,13 @@ export const Inner = styled.div`
 `;
 
 export const InnerLanding = styled(Inner)`
-    padding: 183px 0 200px 0;
+    padding: 83px 0 100px 0;
     z-index: 5;
     margin-bottom: 800px;
+
+    @media (${QUERIES.medium}) {
+        padding: 183px 0 200px 0;
+    }
 `;
 
 export const Heading = styled.h1`
@@ -58,18 +62,27 @@ export const SmallHeading = styled.h2`
     max-width: 700px;
     line-height: 149%;
     display: flex;
-    align-items: center;
-    text-align: center;
+    align-items: left;
+    text-align: left;
     letter-spacing: 0.1em;
+
+    @media (${QUERIES.medium}) {
+        align-items: center;
+        text-align: center;
+    }
 `;
 
 export const Paragraph = styled.p`
-    font-size: 13px;
+    font-size: 10px;
     color: ${COLORS.lightGray};
-    font-size: 13px;
     line-height: 190%;
     letter-spacing: 0.05em;
-    padding-right: 30px;
+    padding-right: 10px;
+
+    @media (${QUERIES.medium}) {
+        font-size: 13px;
+        padding-right: 30px;
+    }
 `;
 
 export const Break = styled.span`
@@ -78,7 +91,11 @@ export const Break = styled.span`
 
 export const Spacing = styled.div`
     display: flex;
-    margin: 200px auto 0 auto;
+    margin: 0px auto 0 auto;
+
+    @media (${QUERIES.medium}) {
+        margin: 200px auto 0 auto;
+    }
 `;
 
 export const FixedSpacing = styled(Spacing)`

@@ -1,11 +1,17 @@
 import styled from 'styled-components/macro';
 import wave from '../../Images/wave.png';
 import { WaveAnim, WaveAnimRev } from '../../Styling';
+import { QUERIES } from '../../Styling';
 
 export const RecipeListCont = styled.div`
     justify-content: center;
     text-align: center;
     user-select: none;
+    margin-top: 100px;
+
+    @media (${QUERIES.medium}) {
+        margin: unset;
+    }
 
     a {
         display: flex;
@@ -27,7 +33,7 @@ export const RecipeListCont = styled.div`
             width: 100%;
             height: auto;
             content: 'Chemex';
-            font-size: 70px;
+            font-size: 25px;
             letter-spacing: 0.1em;
             line-height: 149%;
             -webkit-text-fill-color: transparent;
@@ -38,6 +44,12 @@ export const RecipeListCont = styled.div`
             background-size: cover;
             background-position-y: 85px;
             animation: ${WaveAnimRev} 2s forwards;
+
+            @media (${QUERIES.medium}) {
+                font-size: 70px;
+                letter-spacing: 0.1em;
+                line-height: 149%;
+            }
         }
 
         :hover {
@@ -77,11 +89,15 @@ export const RecipeListCont = styled.div`
 `;
 
 export const Option = styled.div`
-    font-size: 70px;
+    font-size: 25px;
     width: 100%;
     line-height: 149%;
     align-items: center;
     text-align: center;
     position: relative;
     letter-spacing: 0.1em;
+
+    @media (${QUERIES.medium}) {
+        font-size: 70px;
+    }
 `;

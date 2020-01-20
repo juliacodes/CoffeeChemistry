@@ -3,31 +3,40 @@ import { QUERIES } from '../../Styling';
 
 export const NavBarCont = styled.div`
     display: flex;
+    position: relative;
     width: 100%;
     height: auto;
     margin: 0 auto;
-    position: fixed;
-    z-index: 99;
+    z-index: 5;
     transition-duration: 0.3s;
+
+    @media (${QUERIES.medium}) {
+        position: fixed;
+    }
 `;
 
 export const Inner = styled.div`
-    justify-content: space-between;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 30px;
-    align-items: center;
-    max-width: ${QUERIES.maxWidth};
     display: flex;
+    justify-content: start;
+    width: 100%;
+    max-width: ${QUERIES.maxWidth};
+    margin: 0 auto;
+    padding: 20px 30px;
 
     @media (${QUERIES.medium}) {
         padding: 20px 50px;
+        justify-content: space-between;
     }
 
     .Logo {
-        margin-left: auto;
-        margin-right: auto;
+        margin: 10px 0;
         border-bottom: none;
+        display: block;
+
+        @media (${QUERIES.medium}) {
+            margin: 20px auto;
+        }
+
         :hover {
             border-bottom: none;
             transform: scale(0.8);
@@ -47,6 +56,11 @@ export const Inner = styled.div`
         padding: 0;
         margin-left: 0;
         padding-bottom: 2px;
+        display: none;
+
+        @media (${QUERIES.medium}) {
+            display: block;
+        }
 
         :hover {
             border-bottom: 1px solid black;
