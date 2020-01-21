@@ -19,8 +19,8 @@ function Pourover() {
                     definitely contributes to its great flavor, its patented
                     filter’s tight woven design is what makes this a truly
                     unique tasting coffee.'
-                    flavor1='Fullbodied'
-                    flavor2='Rich'
+                    flavor1='Clean'
+                    flavor2='Smooth'
                 />
             </Inner>
         </Container>

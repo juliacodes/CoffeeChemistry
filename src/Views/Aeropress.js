@@ -19,8 +19,8 @@ function Aeropress() {
                     definitely contributes to its great flavor, its patented
                     filter’s tight woven design is what makes this a truly
                     unique tasting coffee.'
-                    flavor1='Fresh'
-                    flavor2='Clean'
+                    flavor1='Acidic'
+                    flavor2='Rich'
                 />
             </Inner>
         </Container>
