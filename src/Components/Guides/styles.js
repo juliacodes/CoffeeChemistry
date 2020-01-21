@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { QUERIES } from '../../Styling';
-import { SmallHeading, Paragraph } from '../../Styling';
+import { SmallHeading } from '../../Styling';
 
 export const GuidesCont = styled.div`
     background-color: black;
