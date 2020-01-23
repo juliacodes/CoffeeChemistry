@@ -9,6 +9,8 @@ export const StepsCont = styled.div`
     justify-content: center;
     align-items: center;
     background-color: black;
+    margin: 0 0 50px 0;
+    padding: 50px 0;
 
     @media (${QUERIES.medium}) {
         width: 35%;
