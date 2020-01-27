@@ -10,6 +10,7 @@ import French from './Views/Recipes/French';
 import Aeropress from './Views/Recipes/Aeropress';
 import Espresso from './Views/Recipes/Espresso';
 import Pourover from './Views/Recipes/Pourover';
+import CoffeeOrigins from './Views/Guides/CoffeeOrigins';
 
 const routing = (
     <BrowserRouter>
@@ -21,6 +22,7 @@ const routing = (
                 <Route path='/aeropress' component={Aeropress} />
                 <Route path='/espresso' component={Espresso} />
                 <Route path='/pourover' component={Pourover} />
+                <Route path='/coffee-origins' component={CoffeeOrigins} />
             </Switch>
         </ScrollToTop>
     </BrowserRouter>
