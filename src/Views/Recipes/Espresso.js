@@ -1,16 +1,16 @@
 import React from 'react';
-import { Container, Inner } from '../Styling';
-import TypeContent from '../Components/RecipePage/TypeContent';
-import NavBar from '../Components/NavBar';
+import { Container, Inner } from '../../Styling';
+import TypeContent from '../../Components/RecipePage/TypeContent';
+import NavBar from '../../Components/NavBar';
 
-function French() {
+function Espresso() {
     return (
         <Container>
             <NavBar type='simple' />
             <Inner>
                 <TypeContent
-                    type='French Press'
-                    steps='french'
+                    type='Espresso'
+                    steps='espresso'
                     ingredients='French Press carafe, Burr Grinder, Digital Scale, Kettle'
                     paragraph='As one of the few coffee brewers that lives in MOMA’s
                     permanent design collection, Chemex is an iconic and
@@ -19,12 +19,12 @@ function French() {
                     definitely contributes to its great flavor, its patented
                     filter’s tight woven design is what makes this a truly
                     unique tasting coffee.'
-                    flavor1='Fullbodied'
-                    flavor2='Rich'
+                    flavor1='Rich'
+                    flavor2='Acidic'
                 />
             </Inner>
         </Container>
     );
 }
 
-export default French;
+export default Espresso;

@@ -1,7 +1,7 @@
 import React from 'react';
-import { Container, Inner } from '../Styling';
-import TypeContent from '../Components/RecipePage/TypeContent';
-import NavBar from '../Components/NavBar';
+import { Container, Inner } from '../../Styling';
+import TypeContent from '../../Components/RecipePage/TypeContent';
+import NavBar from '../../Components/NavBar';
 
 function Chemex() {
     return (

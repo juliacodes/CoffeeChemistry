@@ -5,11 +5,11 @@ import ScrollToTop from './Handler/ScrollToTop';
 import * as serviceWorker from './serviceWorker';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import App from './Views/App';
-import Chemex from './Views/Chemex';
-import French from './Views/French';
-import Aeropress from './Views/Aeropress';
-import Espresso from './Views/Espresso';
-import Pourover from './Views/Pourover';
+import Chemex from './Views/Recipes/Chemex';
+import French from './Views/Recipes/French';
+import Aeropress from './Views/Recipes/Aeropress';
+import Espresso from './Views/Recipes/Espresso';
+import Pourover from './Views/Recipes/Pourover';
 
 const routing = (
     <BrowserRouter>
