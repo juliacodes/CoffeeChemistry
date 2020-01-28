@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Heading, Inner } from '../../../Styling';
+import { Heading, Inner, QUERIES } from '../../../Styling';
 
 export const HeadingCont = styled.div`
     display: flex;
@@ -9,6 +9,11 @@ export const HeadingCont = styled.div`
 
     ${Inner} {
         align-items: unset;
+        padding: 130px 20px 0 20px;
+
+        @media (${QUERIES.medium}) {
+            padding: 130px 50px 0 50px;
+        }
     }
 
     ${Heading} {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from '../../Styling';
+import { Container, Inner } from '../../Styling';
 import NavBar from '../../Components/NavBar';
 import Grid from '../../Components/GuidesPage/Grid';
 import GuideHeading from '../../Components/GuidesPage/GuideHeading';
@@ -8,7 +8,11 @@ function CoffeeOrigins() {
     return (
         <Container>
             <NavBar type='simple' />
+
             <GuideHeading />
+            <Inner>
+                <Grid></Grid>
+            </Inner>
         </Container>
     );
 }
