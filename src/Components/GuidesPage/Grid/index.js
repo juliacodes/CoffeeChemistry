@@ -5,9 +5,14 @@ import {
     Column,
     RightDoubleColumn,
     TextColumn,
+    Heading,
+    Text,
+    ImageLink,
+    Image,
     ImageColumn
 } from './styles';
-import { Heading } from '../../../Styling';
+
+import CoffeeOrigins from '../../../Images/Guides/coffeeorigins.jpg';
 
 const Grid = props => (
     <GridContainer>
@@ -33,58 +38,120 @@ const Grid = props => (
             here oh well
         </Caption>
         <RightDoubleColumn>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-            aenean ultricies risus, orci. Sed sit ultrices habitasse tincidunt
-            eu, tempus mauris maecenas. Suspendisse sed quam convallis quis
-            eget.{' '}
+            <Heading style={{ marginTop: 50 }}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+                aenean ultricies risus, orci. Sed sit ultrices habitasse
+                tincidunt eu, tempus mauris maecenas. Suspendisse sed quam
+                convallis quis eget.
+            </Heading>
         </RightDoubleColumn>
         <TextColumn>
-            Tristique tempus lacus, vitae, ullamcorper vivamus urna quisque in.
-            A pellentesque facilisis tellus dignissim id. <br />
-            <br />
-            Mattis in et urna ac. Commodo scelerisque lacus phasellus vulputate
-            massa ac. Feugiat et purus sed odio ut ipsum. Elementum orci
-            placerat non scelerisque amet quam eget ipsum duis. Pellentesque id
-            neque, etiam aliquam nunc ultricies molestie. <br />
-            <br />
-            Nibh elit, sodales sed vestibulum pellentesque. Euismod turpis
-            ipsum, tortor ligula augue iaculis nullam ornare. Fermentum interdum
-            eget etiam ac varius.
+            <Text>
+                Tristique tempus lacus, vitae, ullamcorper vivamus urna quisque
+                in. A pellentesque facilisis tellus dignissim id. <br />
+                <br />
+                Mattis in et urna ac. Commodo scelerisque lacus phasellus
+                vulputate massa ac. Feugiat et purus sed odio ut ipsum.
+                Elementum orci placerat non scelerisque amet quam eget ipsum
+                duis. Pellentesque id neque, etiam aliquam nunc ultricies
+                molestie. <br />
+                <br />
+                Nibh elit, sodales sed vestibulum pellentesque. Euismod turpis
+                ipsum, tortor ligula augue iaculis nullam ornare. Fermentum
+                interdum eget etiam ac varius.
+            </Text>
         </TextColumn>
         <TextColumn style={{ gridArea: '3/4/3/4' }}>
-            Tristique tempus lacus, vitae, ullamcorper vivamus urna quisque in.
-            A pellentesque facilisis tellus dignissim id. <br />
-            <br />
-            Mattis in et urna ac. Commodo scelerisque lacus phasellus vulputate
-            massa ac. Feugiat et purus sed odio ut ipsum. Elementum orci
-            placerat non scelerisque amet quam eget ipsum duis. Pellentesque id
-            neque, etiam aliquam nunc ultricies molestie. <br />
-            <br />
-            Nibh elit, sodales sed vestibulum pellentesque. Euismod turpis
-            ipsum, tortor ligula augue iaculis nullam ornare. Fermentum interdum
-            eget etiam ac varius.
+            <Text>
+                Tristique tempus lacus, vitae, ullamcorper vivamus urna quisque
+                in. A pellentesque facilisis tellus dignissim id. <br />
+                <br />
+                Mattis in et urna ac. Commodo scelerisque lacus phasellus
+                vulputate massa ac. Feugiat et purus sed odio ut ipsum.
+                Elementum orci placerat non scelerisque amet quam eget ipsum
+                duis. Pellentesque id neque, etiam aliquam nunc ultricies
+                molestie. <br />
+                <br />
+                Nibh elit, sodales sed vestibulum pellentesque. Euismod turpis
+                ipsum, tortor ligula augue iaculis nullam ornare. Fermentum
+                interdum eget etiam ac varius.
+            </Text>
         </TextColumn>
         <ImageColumn />
         <TextColumn style={{ gridArea: '5/2/5/2' }}>
-            <Heading>Hello</Heading>
-            Tristique tempus lacus, vitae, ullamcorper vivamus urna quisque in.
-            A pellentesque facilisis tellus dignissim id.
+            <Heading>Arabica</Heading>
+            <Text>
+                Mattis in et urna ac. Commodo scelerisque lacus phasellus
+                vulputate massa ac. Feugiat et purus sed odio ut ipsum.
+                Elementum orci placerat non scelerisque amet quam eget ipsum
+                duis.
+            </Text>
         </TextColumn>
         <TextColumn style={{ gridArea: '5/3/5/3' }}>
-            <Heading>Hello</Heading>
-            Tristique tempus lacus, vitae, ullamcorper vivamus urna quisque in.
-            A pellentesque facilisis tellus dignissim id.
+            <Heading>Robusta</Heading>
+            <Text>
+                Mattis in et urna ac. Commodo scelerisque lacus phasellus
+                vulputate massa ac. Feugiat et purus sed odio ut ipsum.
+                Elementum orci placerat non scelerisque amet quam eget ipsum
+                duis.
+            </Text>
         </TextColumn>
         <TextColumn style={{ gridArea: '6/2/6/2' }}>
-            <Heading>Hello</Heading>
-            Tristique tempus lacus, vitae, ullamcorper vivamus urna quisque in.
-            A pellentesque facilisis tellus dignissim id.
+            <Heading>Liberica</Heading>
+            <Text>
+                Mattis in et urna ac. Commodo scelerisque lacus phasellus
+                vulputate massa ac. Feugiat et purus sed odio ut ipsum.
+                Elementum orci placerat non scelerisque amet quam eget ipsum
+                duis.
+            </Text>
         </TextColumn>
         <TextColumn style={{ gridArea: '6/3/6/3' }}>
-            <Heading>Hello</Heading>
-            Tristique tempus lacus, vitae, ullamcorper vivamus urna quisque in.
-            A pellentesque facilisis tellus dignissim id.
+            <Heading>Excelsa</Heading>
+            <Text>
+                Mattis in et urna ac. Commodo scelerisque lacus phasellus
+                vulputate massa ac. Feugiat et purus sed odio ut ipsum.
+                Elementum orci placerat non scelerisque amet quam eget ipsum
+                duis.
+            </Text>
         </TextColumn>
+        <ImageLink
+            style={{
+                gridArea: '7/1/7/1',
+                textAlign: 'center',
+                alignSelf: 'unset'
+            }}
+        >
+            <Image />
+            <Heading style={{ marginBottom: 0 }}>Coffee Origins</Heading>
+            <Text style={{ marginTop: 0 }}>6 Min Read</Text>
+        </ImageLink>
+        <ImageLink style={{ gridArea: '7/2/7/5', textAlign: 'center' }}>
+            <Image className='triImage' />
+            <Heading style={{ marginBottom: 0 }}>Coffee Origins</Heading>
+            <Text style={{ marginTop: 0 }}>6 Min Read</Text>
+        </ImageLink>
+        <ImageLink
+            style={{
+                gridArea: '8/1/8/4',
+                textAlign: 'center',
+                alignSelf: 'unset'
+            }}
+        >
+            <Image className='triImage espresso' />
+            <Heading style={{ marginBottom: 0 }}>Coffee Origins</Heading>
+            <Text style={{ marginTop: 0 }}>6 Min Read</Text>
+        </ImageLink>
+        <ImageLink
+            style={{
+                gridArea: '8/4/8/5',
+                textAlign: 'center',
+                alignSelf: 'flex-end'
+            }}
+        >
+            <Image className='mug' />
+            <Heading style={{ marginBottom: 0 }}>Coffee Origins</Heading>
+            <Text style={{ marginTop: 0 }}>6 Min Read</Text>
+        </ImageLink>
     </GridContainer>
 );
 
