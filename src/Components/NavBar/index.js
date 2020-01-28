@@ -42,17 +42,6 @@ export default class Navbar extends React.Component {
         return (
             <NavBarCont>
                 <Inner>
-                    {this.props.type !== 'simple' && (
-                        <Link
-                            style={{
-                                color: this.state.color
-                            }}
-                            to='/guides'
-                        >
-                            Guides
-                        </Link>
-                    )}
-
                     <Link className='Logo' to='/'>
                         {!this.state.imageBlack && (
                             <Logo
@@ -75,16 +64,6 @@ export default class Navbar extends React.Component {
                             />
                         )}
                     </Link>
-                    {this.props.type !== 'simple' && (
-                        <Link
-                            style={{
-                                color: this.state.color
-                            }}
-                            to='/#recipes'
-                        >
-                            recipes
-                        </Link>
-                    )}
                 </Inner>
             </NavBarCont>
         );
