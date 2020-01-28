@@ -32,8 +32,6 @@ const Grid = props => (
             Discover the originals and flavors of different beans random text
             here oh well
         </Caption>
-        <Column></Column>
-        <Column></Column>
         <RightDoubleColumn>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
             aenean ultricies risus, orci. Sed sit ultrices habitasse tincidunt
@@ -53,7 +51,7 @@ const Grid = props => (
             ipsum, tortor ligula augue iaculis nullam ornare. Fermentum interdum
             eget etiam ac varius.
         </TextColumn>
-        <TextColumn style={{ gridArea: '4/4/5/5' }}>
+        <TextColumn style={{ gridArea: '3/4/3/4' }}>
             Tristique tempus lacus, vitae, ullamcorper vivamus urna quisque in.
             A pellentesque facilisis tellus dignissim id. <br />
             <br />
@@ -67,22 +65,22 @@ const Grid = props => (
             eget etiam ac varius.
         </TextColumn>
         <ImageColumn />
+        <TextColumn style={{ gridArea: '5/2/5/2' }}>
+            <Heading>Hello</Heading>
+            Tristique tempus lacus, vitae, ullamcorper vivamus urna quisque in.
+            A pellentesque facilisis tellus dignissim id.
+        </TextColumn>
+        <TextColumn style={{ gridArea: '5/3/5/3' }}>
+            <Heading>Hello</Heading>
+            Tristique tempus lacus, vitae, ullamcorper vivamus urna quisque in.
+            A pellentesque facilisis tellus dignissim id.
+        </TextColumn>
         <TextColumn style={{ gridArea: '6/2/6/2' }}>
             <Heading>Hello</Heading>
             Tristique tempus lacus, vitae, ullamcorper vivamus urna quisque in.
             A pellentesque facilisis tellus dignissim id.
         </TextColumn>
         <TextColumn style={{ gridArea: '6/3/6/3' }}>
-            <Heading>Hello</Heading>
-            Tristique tempus lacus, vitae, ullamcorper vivamus urna quisque in.
-            A pellentesque facilisis tellus dignissim id.
-        </TextColumn>
-        <TextColumn style={{ gridArea: '7/2/7/2' }}>
-            <Heading>Hello</Heading>
-            Tristique tempus lacus, vitae, ullamcorper vivamus urna quisque in.
-            A pellentesque facilisis tellus dignissim id.
-        </TextColumn>
-        <TextColumn style={{ gridArea: '7/3/7/3' }}>
             <Heading>Hello</Heading>
             Tristique tempus lacus, vitae, ullamcorper vivamus urna quisque in.
             A pellentesque facilisis tellus dignissim id.

@@ -4,15 +4,14 @@ import Pourover from '../../../Images/Guides/pourover.jpg';
 
 export const GridContainer = styled.div`
     height: 100%;
-    width: 100%;
+    margin-top: 50px;
     margin-bottom: 50px;
     padding: 0 50px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
-    grid-column-gap: 20px;
+    column-gap: 20px;
     grid-row-gap: 50px;
-    grid-template-rows: repeat(2, 1fr);
 
     div {
         align-self: center;
@@ -46,24 +45,25 @@ export const Caption = styled.div`
 `;
 
 export const RightDoubleColumn = styled.div`
-    grid-area: 2 / 3 / span 2 / span 3;
+    grid-area: 2 / 3 / 2 / 5;
     font-family: IBM Plex Sans;
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 20px;
+    margin-top: 30px;
     line-height: 210%;
     letter-spacing: 0.05em;
     color: #000000;
 `;
 
 export const TextColumn = styled(RightDoubleColumn)`
-    grid-area: 4 / 3 / 4 / 4;
+    grid-area: 3 / 3 / 3 / 4;
     font-size: 12px;
     color: #767676;
 `;
 
 export const ImageColumn = styled.div`
-    grid-area: 5 / 1 / 6 / 4;
+    grid-area: 4 / 1 / 4 / 4;
     height: 400px;
     background-position: center center;
     background-size: cover;

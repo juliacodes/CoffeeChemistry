@@ -10,7 +10,7 @@ function CoffeeOrigins() {
             <NavBar type='simple' />
 
             <GuideHeading />
-            <Inner>
+            <Inner style={{ paddingTop: 0 }}>
                 <Grid></Grid>
             </Inner>
         </Container>
