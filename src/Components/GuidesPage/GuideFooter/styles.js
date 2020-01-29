@@ -20,7 +20,40 @@ export const GuideFooterCont = styled.div`
     width: 100%;
     padding: 100px 0 50px 0;
 
+    ::after {
+        position: absolute;
+        top: 0;
+        left: 100%;
+        width: 100%;
+        height: 100%;
+        content: '';
+        background-color: black;
+        z-index: 0;
+        display: block;
+        transition: left 1.2s ease-in-out;
+    }
+
+    .color {
+        transition-duration: 1.2s;
+    }
+
+    :hover {
+        ::after {
+            left: 0;
+        }
+
+        ${Paragraph} {
+            color: white;
+        }
+
+        .color {
+            fill: white;
+        }
+    }
+
     ${Inner} {
+        position: relative;
+        z-index: 9;
         padding-top: 0;
         align-items: center;
         padding-right: 50px;
@@ -33,6 +66,7 @@ export const GuideFooterCont = styled.div`
         padding: 0 20px 0 0;
         margin: 0;
         display: inline-block;
+        transition-duration: 1.2s;
     }
 
     & .RightArrow {
