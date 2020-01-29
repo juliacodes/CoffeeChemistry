@@ -16,6 +16,7 @@ const Grid = props => (
     <GridContainer>
         <Column>
             <svg
+                className='downArrow'
                 width='17'
                 height='22'
                 viewBox='0 0 17 22'

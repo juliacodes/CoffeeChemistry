@@ -8,6 +8,7 @@ function GuideFooter() {
             <Inner>
                 <Paragraph>Next Guide</Paragraph>
                 <svg
+                    className='RightArrow'
                     width='22'
                     height='17'
                     viewBox='0 0 22 17'

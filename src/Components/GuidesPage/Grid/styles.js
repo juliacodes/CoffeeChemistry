@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { QUERIES } from '../../../Styling';
 import Pourover from '../../../Images/Guides/pourover.jpg';
 import CoffeeOrigins from '../../../Images/Guides/coffeeorigins.jpg';
@@ -34,8 +34,26 @@ export const GridContainer = styled.div`
     }
 `;
 
+export const downArrowBounce = keyframes`
+  0% {
+    transform: translateY(0);
+  }
+
+  50%{
+    transform: translateY(-4px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+`;
+
 export const Column = styled.div`
     min-width: 300px;
+
+    & .downArrow {
+        animation: ${downArrowBounce} 1.5s infinite;
+    }
 `;
 
 export const Caption = styled.div`
