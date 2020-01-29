@@ -120,8 +120,12 @@ const Grid = props => (
                 alignSelf: 'unset'
             }}
         >
-            <Image />
-            <Heading style={{ marginBottom: 0 }}>Coffee Origins</Heading>
+            <a href=''>
+                <Image />
+            </a>
+            <a href=''>
+                <Heading style={{ marginBottom: 0 }}>Coffee Origins</Heading>
+            </a>
             <Text style={{ marginTop: 0 }}>6 Min Read</Text>
         </ImageLink>
         <ImageLink style={{ gridArea: '7/2/7/5', textAlign: 'center' }}>

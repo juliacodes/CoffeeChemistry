@@ -17,6 +17,15 @@ export const GridContainer = styled.div`
     column-gap: 20px;
     grid-row-gap: 100px;
 
+    a {
+        text-decoration: none;
+        transition-duration: 2.2s;
+
+        :hover {
+            text-decoration: underline;
+        }
+    }
+
     div {
         align-self: center;
         position: relative;
