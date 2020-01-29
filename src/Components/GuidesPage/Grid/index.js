@@ -12,8 +12,6 @@ import {
     ImageColumn
 } from './styles';
 
-import CoffeeOrigins from '../../../Images/Guides/coffeeorigins.jpg';
-
 const Grid = props => (
     <GridContainer>
         <Column>
