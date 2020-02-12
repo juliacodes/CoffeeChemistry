@@ -36,7 +36,7 @@ const Grid = props => (
             Discover the originals and flavors of different beans random text
             here oh well
         </Caption>
-        <RightDoubleColumn>
+        <RightDoubleColumn className='BoldPara'>
             <Heading style={{ marginTop: 50 }}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
                 aenean ultricies risus, orci. Sed sit ultrices habitasse
@@ -44,7 +44,7 @@ const Grid = props => (
                 convallis quis eget.
             </Heading>
         </RightDoubleColumn>
-        <TextColumn>
+        <TextColumn className='RegularPara'>
             <Text>
                 Tristique tempus lacus, vitae, ullamcorper vivamus urna quisque
                 in. A pellentesque facilisis tellus dignissim id. <br />
@@ -60,7 +60,7 @@ const Grid = props => (
                 interdum eget etiam ac varius.
             </Text>
         </TextColumn>
-        <TextColumn style={{ gridArea: '3/4/3/4' }}>
+        <TextColumn className='RegularPara2'>
             <Text>
                 Tristique tempus lacus, vitae, ullamcorper vivamus urna quisque
                 in. A pellentesque facilisis tellus dignissim id. <br />

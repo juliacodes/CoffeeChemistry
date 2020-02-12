@@ -10,12 +10,41 @@ export const GridContainer = styled.div`
     height: 100%;
     margin-top: 50px;
     margin-bottom: 50px;
-    padding: 0 50px;
+    padding: 0 20px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-template-rows: 1fr;
     column-gap: 20px;
     grid-row-gap: 100px;
+
+    @media (${QUERIES.medium}) {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        padding: 0 50px;
+    }
+    .BoldPara {
+        grid-area: 2 / 1 / 2 / 5;
+
+        @media (${QUERIES.medium}) {
+            grid-area: 2 / 3 / 2 / 5;
+        }
+    }
+
+    .RegularPara {
+        grid-area: 3 / 1 / 3 / 3;
+
+        @media (${QUERIES.medium}) {
+            grid-area: 3 / 3 / 3 / 4;
+        }
+    }
+
+    .RegularPara2 {
+        grid-area: 3 / 3 / 3 / 5;
+
+        @media (${QUERIES.medium}) {
+            grid-area: 3 / 4 / 3 / 4;
+        }
+    }
 
     a {
         text-decoration: none;
@@ -58,8 +87,6 @@ export const downArrowBounce = keyframes`
 `;
 
 export const Column = styled.div`
-    min-width: 300px;
-
     & .downArrow {
         animation: ${downArrowBounce} 1.5s infinite;
     }
@@ -75,7 +102,6 @@ export const Caption = styled.div`
     align-items: center;
     letter-spacing: 0.05em;
     color: #666666;
-    min-width: 300px;
 `;
 
 export const Heading = styled.p`
@@ -87,13 +113,11 @@ export const Heading = styled.p`
     line-height: 210%;
     letter-spacing: 0.05em;
     color: #000000;
-    min-width: 300px;
 `;
 
 export const Text = styled(Heading)`
     font-size: 12px;
     color: #767676;
-    min-width: 300px;
 `;
 
 export const ImageLink = styled.div`
@@ -124,7 +148,7 @@ export const Image = styled.div`
 `;
 
 export const RightDoubleColumn = styled.div`
-    grid-area: 2 / 3 / 2 / 5;
+    grid-area: 2 / 1 / 2 / 5;
 `;
 export const TextColumn = styled(RightDoubleColumn)`
     grid-area: 3 / 3 / 3 / 4;
@@ -136,5 +160,4 @@ export const ImageColumn = styled.div`
     background-position: center center;
     background-size: cover;
     background-image: url(${Pourover});
-    min-width: 300px;
 `;
