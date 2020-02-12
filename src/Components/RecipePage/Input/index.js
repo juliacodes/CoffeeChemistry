@@ -2,51 +2,7 @@ import React, { Component } from 'react';
 import { Inputs, InputWrapper } from './styles';
 import Odometer from 'react-odometerjs';
 export default class Input extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            serving: 0,
-            strength: 15,
-            grounds: 0,
-            water: 0,
-            temp: 0
-        };
-        this.servingChange = this.servingChange.bind(this);
-        this.strengthChange = this.strengthChange.bind(this);
-    }
-
-    componentDidMount() {
-        this.setState({
-            serving: 1,
-            strength: 15,
-            grounds: 15,
-            water: 225,
-            temp: 200
-        });
-    }
-
-    servingChange(e) {
-        let grounds = e.target.valueAsNumber * this.state.strength;
-        this.setState({
-            serving: e.target.valueAsNumber,
-            grounds: grounds,
-            water: 225 * e.target.valueAsNumber
-        });
-    }
-
-    strengthChange(e) {
-        let strength = Math.round(
-            this.state.water / (e.target.valueAsNumber + 12)
-        );
-        let grounds = this.state.serving * strength;
-        this.setState({
-            strength: strength,
-            grounds: grounds
-        });
-    }
-
-    render() {
-        const { serving, temp, grounds, water } = this.state;
+    render(props) {
         return (
             <Inputs>
                 <form>
@@ -57,8 +13,8 @@ export default class Input extends Component {
                         Servings <u>Edit</u>
                     </label>
                     <input
-                        value={serving}
-                        onChange={this.servingChange}
+                        value={this.props.serving}
+                        onChange={e => this.props.servingChange(e)}
                         className='num-input'
                         type='number'
                         name='name'
@@ -87,7 +43,7 @@ export default class Input extends Component {
                             max='5'
                             step='1'
                             list='ticks'
-                            onChange={this.strengthChange}
+                            onChange={e => this.props.strengthChange(e)}
                         />
                     </InputWrapper>
                 </form>
@@ -105,19 +61,31 @@ export default class Input extends Component {
                 <form>
                     <legend>Temperature</legend>
                     <label>Temperature</label>
-                    <Odometer format='d' duration={500} value={temp} />
+                    <Odometer
+                        format='d'
+                        duration={500}
+                        value={this.props.temp}
+                    />
                     <span>˚F</span>
                 </form>
                 <form>
                     <legend>Total Water</legend>
                     <label>Total Water</label>
-                    <Odometer format='d' duration={500} value={water} />
+                    <Odometer
+                        format='d'
+                        duration={500}
+                        value={this.props.water}
+                    />
                     <span>g</span>
                 </form>
                 <form>
                     <legend>Coffee Grounds</legend>
                     <label>Coffee Grounds</label>
-                    <Odometer format='d' duration={500} value={grounds} />
+                    <Odometer
+                        format='d'
+                        duration={500}
+                        value={this.props.grounds}
+                    />
                     <span>g</span>
                 </form>
                 <form>
