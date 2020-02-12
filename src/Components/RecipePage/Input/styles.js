@@ -28,11 +28,11 @@ export const Inputs = styled.div`
             font-family: 'Lato', sans-serif;
             font-style: italic;
             text-transform: capitalize;
-            font-weight: 900;
-            font-size: 15px;
+            font-weight: 400;
+            font-size: 13px;
             line-height: 117%;
             letter-spacing: 0.2em;
-            color: black;
+            color: #575757;
         }
 
         .num-input {
@@ -42,7 +42,7 @@ export const Inputs = styled.div`
             letter-spacing: 0.2em;
             text-transform: capitalize;
             border: none;
-            margin: 20px 0 35px 0;
+            margin: 20px 0 25px 0;
             color: black;
             outline: none;
             width: 100%;
@@ -67,7 +67,7 @@ export const Inputs = styled.div`
             text-transform: capitalize;
             line-height: auto;
             letter-spacing: 0.2em;
-            margin: 20px 0 35px 0;
+            margin: 20px 0 25px 0;
         }
     }
 `;

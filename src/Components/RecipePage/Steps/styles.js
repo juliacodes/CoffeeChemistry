@@ -21,14 +21,14 @@ export const Step = styled.div`
     margin: 10px auto;
 
     @media (${QUERIES.medium}) {
-        margin: 20px auto;
+        margin: 10px auto;
     }
 
     p {
         text-transform: uppercase;
         font-family: 'Lato', sans-serif;
         font-style: italic;
-        font-size: 20px;
+        font-size: 15px;
         line-height: 117%;
         text-transform: capitalize;
         color: #3e3e3e;
@@ -39,12 +39,11 @@ export const Step = styled.div`
 
         &:nth-child(2) {
             font-weight: normal;
-            font-size: 17px;
+            font-size: 15px;
             line-height: 117%;
             color: white;
             text-align: center;
             letter-spacing: 0.2em;
-            text-transform: capitalize;
         }
 
         &:nth-child(3) {
