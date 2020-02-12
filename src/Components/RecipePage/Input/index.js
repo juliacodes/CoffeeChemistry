@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Inputs, InputWrapper } from './styles';
 import Odometer from 'react-odometerjs';
+import 'rc-input-number/assets/index.css';
+import InputNumber from 'rc-input-number';
+
 export default class Input extends Component {
     render(props) {
         return (
@@ -12,12 +15,13 @@ export default class Input extends Component {
                     <label>
                         Servings <u>Edit</u>
                     </label>
-                    <input
-                        value={this.props.serving}
-                        onChange={e => this.props.servingChange(e)}
-                        className='num-input'
-                        type='number'
-                        name='name'
+                    <InputNumber
+                        aria-label='Simple number input example'
+                        min={1}
+                        max={10}
+                        style={{ width: 100 }}
+                        value={this.props.value}
+                        onChange={this.props.onChange}
                     />
                 </form>
                 <form>

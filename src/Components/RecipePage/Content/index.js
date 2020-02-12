@@ -13,28 +13,30 @@ export default class Content extends Component {
             water: 0,
             temp: 0
         };
-        this.servingChange = this.servingChange.bind(this);
         this.strengthChange = this.strengthChange.bind(this);
     }
 
     componentDidMount() {
         this.setState({
-            serving: 1,
+            serving: 2,
             strength: 15,
-            grounds: 15,
-            water: 225,
-            temp: 200
+            grounds: 30,
+            water: 450,
+            temp: 200,
+            value: 2
         });
     }
 
-    servingChange(e) {
-        let grounds = e.target.valueAsNumber * this.state.strength;
+    onChange = value => {
+        this.setState({ value });
+
+        let grounds = value * this.state.strength;
         this.setState({
-            serving: e.target.valueAsNumber,
+            serving: value,
             grounds: grounds,
-            water: 225 * e.target.valueAsNumber
+            water: 225 * value
         });
-    }
+    };
 
     strengthChange(e) {
         let strength = Math.round(
@@ -48,7 +50,7 @@ export default class Content extends Component {
     }
 
     render(props) {
-        const { serving, temp, grounds, water } = this.state;
+        const { value, serving, temp, grounds, water } = this.state;
         return (
             <RecipeCont>
                 <Input
@@ -59,6 +61,8 @@ export default class Content extends Component {
                     strengthChange={this.strengthChange}
                     servingChange={this.servingChange}
                     ingredients={this.props.ingredients}
+                    value={value}
+                    onChange={this.onChange}
                 />
                 <Steps
                     serving={serving}

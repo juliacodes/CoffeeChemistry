@@ -115,7 +115,9 @@ code {
     -o-transform: translateY(0);
     transform: translateY(0);
 }
-
+input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
 .odometer.odometer-auto-theme,
 .odometer.odometer-theme-default {
     font-family: 'Michroma', sans-serif;

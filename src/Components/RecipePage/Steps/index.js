@@ -19,19 +19,31 @@ const Steps = props => (
                 <Step>
                     <p>3.</p>
                     <p>Bloom - First Pour</p>
-                    <Odometer format='d' duration={500} value={props.water} />
+                    <Odometer
+                        format='d'
+                        duration={500}
+                        value={props.grounds * 2.5}
+                    />
                     <span>g</span>
                 </Step>
                 <Step>
                     <p>4.</p>
                     <p>Second Pour</p>
-                    <Odometer format='d' duration={500} value={props.water} />
+                    <Odometer
+                        format='d'
+                        duration={500}
+                        value={((props.water - props.grounds * 2.5) / 3) * 2}
+                    />
                     <span>g</span>
                 </Step>
                 <Step>
                     <p>5.</p>
                     <p>Final Pour</p>
-                    <Odometer format='d' duration={500} value={props.water} />
+                    <Odometer
+                        format='d'
+                        duration={500}
+                        value={(props.water - props.grounds * 2.5) / 3}
+                    />
                     <span>g</span>
                 </Step>
                 <Step>
