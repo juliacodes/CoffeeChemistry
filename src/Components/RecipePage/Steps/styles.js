@@ -12,6 +12,18 @@ export const StepsCont = styled.div`
     margin: 0 0 50px 0;
     padding: 50px 0;
 
+    .odometer.odometer-auto-theme,
+    .odometer.odometer-theme-default {
+        color: white;
+        margin: 0;
+    }
+
+    span {
+        color: white;
+        vertical-align: middle;
+        font-size: 26px;
+    }
+
     @media (${QUERIES.medium}) {
         width: 35%;
     }

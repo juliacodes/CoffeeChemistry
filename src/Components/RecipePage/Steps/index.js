@@ -1,5 +1,6 @@
 import React from 'react';
 import { StepsCont, Step } from './styles';
+import Odometer from 'react-odometerjs';
 
 const Steps = props => (
     <StepsCont>
@@ -12,22 +13,26 @@ const Steps = props => (
                 <Step>
                     <p>2.</p>
                     <p>Add Ground Coffee</p>
-                    <p>400g</p>
+                    <Odometer format='d' duration={500} value={props.grounds} />
+                    <span>g</span>
                 </Step>
                 <Step>
                     <p>3.</p>
                     <p>Bloom - First Pour</p>
-                    <p>400g</p>
+                    <Odometer format='d' duration={500} value={props.water} />
+                    <span>g</span>
                 </Step>
                 <Step>
                     <p>4.</p>
                     <p>Second Pour</p>
-                    <p>100g</p>
+                    <Odometer format='d' duration={500} value={props.water} />
+                    <span>g</span>
                 </Step>
                 <Step>
                     <p>5.</p>
                     <p>Final Pour</p>
-                    <p>200g</p>
+                    <Odometer format='d' duration={500} value={props.water} />
+                    <span>g</span>
                 </Step>
                 <Step>
                     <p>6.</p>

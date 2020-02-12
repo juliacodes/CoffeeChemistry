@@ -60,7 +60,13 @@ export default class Content extends Component {
                     servingChange={this.servingChange}
                     ingredients={this.props.ingredients}
                 />
-                <Steps steps={this.props.steps} />
+                <Steps
+                    serving={serving}
+                    temp={temp}
+                    grounds={grounds}
+                    water={water}
+                    steps={this.props.steps}
+                />
             </RecipeCont>
         );
     }
