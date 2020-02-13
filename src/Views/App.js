@@ -4,7 +4,8 @@ import {
     InnerLanding,
     Heading,
     Spacing,
-    FixedSpacing
+    FixedSpacing,
+    Loader
 } from '../Styling';
 import NavBar from '../Components/NavBar';
 import RecipeList from '../Components/RecipeList';
@@ -13,6 +14,7 @@ import Guides from '../Components/Guides';
 function App() {
     return (
         <Container>
+            <Loader />
             <NavBar />
             <InnerLanding>
                 <Spacing>

@@ -131,3 +131,30 @@ export const WaveAnimRev = keyframes`
     background-position-x: 0;
   }
 `;
+
+export const Fade = keyframes`
+  0% {
+   opacity: 1;
+  }
+
+  90%{
+    opacity: 0;
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+`;
+
+export const Loader = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    z-index: 6;
+    animation: ${Fade} 1.5s forwards;
+`;

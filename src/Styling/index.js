@@ -11,5 +11,6 @@ export {
     Paragraph,
     Break,
     WaveAnim,
-    WaveAnimRev
+    WaveAnimRev,
+    Loader
 } from './styles';
