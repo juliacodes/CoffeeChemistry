@@ -189,6 +189,7 @@ form > span {
 .rc-input-number-disabled:hover .rc-input-number-handler-up,
 .rc-input-number-disabled:hover .rc-input-number-handler-wrap {
     border-color: transparent;
+    border: none;
 }
 .rc-input-number-input-wrap {
     overflow: hidden;
@@ -223,6 +224,7 @@ form > span {
     height: 100%;
     padding-top: 15px;
     transition: all 0.3s;
+    border: none;
 }
 .rc-input-number-handler-up {
     padding-top: 1px;
