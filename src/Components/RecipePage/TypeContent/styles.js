@@ -1,9 +1,25 @@
 import styled from 'styled-components';
-import { Inner, QUERIES, Container, Paragraph } from '../../../Styling';
+import {
+    Inner,
+    QUERIES,
+    Container,
+    Paragraph,
+    Heading
+} from '../../../Styling';
 
 export const ContainerMin = styled(Container)`
     height: auto;
-    margin: 200px 0;
+    margin: 0 0 50px 0;
+    width: auto;
+
+    @media (${QUERIES.medium}) {
+        margin: 200px 0;
+    }
+
+    ${Heading} {
+        text-align: left;
+        font-size: 20px;
+    }
 `;
 
 export const RecipeFlexCont = styled.div`

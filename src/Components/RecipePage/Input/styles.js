@@ -4,10 +4,12 @@ import bean from '../../../Images/bean.png';
 
 export const Inputs = styled.div`
     width: 100%;
-    padding-right: 20%;
+    padding-right: 0;
+    margin-bottom: 30px;
 
     @media (${QUERIES.medium}) {
         width: 50%;
+        padding-right: 20%;
     }
 
     form {
