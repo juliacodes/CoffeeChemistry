@@ -181,6 +181,7 @@ form > span {
 .rc-input-number:hover .rc-input-number-handler-up,
 .rc-input-number:hover .rc-input-number-handler-wrap {
     border-color: transparent;
+    border: none;
 }
 .rc-input-number-disabled:hover {
     border-color: transparent;
@@ -227,6 +228,7 @@ form > span {
     padding-top: 1px;
     transition: all 0.3s;
     transform: scale(1.5);
+    border: none;
 }
 .rc-input-number-handler-up-inner:after {
     content: '+';
@@ -234,6 +236,7 @@ form > span {
 .rc-input-number-handler-down {
     transition: all 0.3s;
     transform: scale(1.5);
+    border: none;
 }
 .rc-input-number-handler-down-inner:after {
     content: '-';
