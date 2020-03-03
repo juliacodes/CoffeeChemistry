@@ -14,7 +14,7 @@ import {
 
 const Grid = props => (
     <GridContainer>
-        <Column>
+        <Column className='downArrow'>
             <svg
                 className='downArrow'
                 width='17'
@@ -30,9 +30,7 @@ const Grid = props => (
             </svg>
             <span>Explore</span>
         </Column>
-        <Column></Column>
-        <Column></Column>
-        <Caption>
+        <Caption className='Caption'>
             Discover the originals and flavors of different beans random text
             here oh well
         </Caption>

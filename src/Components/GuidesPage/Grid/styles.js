@@ -22,6 +22,20 @@ export const GridContainer = styled.div`
         margin-bottom: 50px;
         padding: 0 50px;
     }
+
+    .downArrow {
+        grid-area: 1 / 1 / 1 / 5;
+
+        @media (${QUERIES.medium}) {
+            grid-area: 1 / 1 / 1 / 2;
+        }
+    }
+
+    .Caption {
+        @media (${QUERIES.medium}) {
+            grid-area: 1 / 4 / 1 / 5;
+        }
+    }
     .BoldPara {
         grid-area: 2 / 1 / 2 / 5;
 
