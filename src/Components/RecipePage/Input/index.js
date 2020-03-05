@@ -42,9 +42,9 @@ export default class Input extends Component {
                             name='coffeestrength'
                             className='dragger'
                             type='range'
-                            min='1'
-                            defaultValue='3'
-                            max='5'
+                            min='13'
+                            defaultValue='15'
+                            max='17'
                             step='1'
                             list='ticks'
                             onChange={e => this.props.strengthChange(e)}

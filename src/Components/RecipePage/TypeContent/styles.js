@@ -34,6 +34,8 @@ export const InnerPadding = styled(Inner)`
     justify-content: unset;
     align-items: unset;
     padding: 0px 20px;
+    margin-bottom: 120px;
+    background-color: white;
 
     @media (${QUERIES.medium}) {
         padding: 0px 50px;
@@ -41,6 +43,8 @@ export const InnerPadding = styled(Inner)`
 
     ${Paragraph} {
         margin: 40px 0;
+        max-width: 800px;
+
         span {
             font-family: 'Lato', sans-serif;
             font-style: italic;

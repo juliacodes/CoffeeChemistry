@@ -29,22 +29,25 @@ export default class Content extends Component {
 
     onChange = value => {
         this.setState({ value });
+        let water = value * 225;
+        let grounds = water / this.state.strength;
 
-        let grounds = value * this.state.strength;
+        console.log('serving: ' + value);
+        console.log('water: ' + water);
+        console.log('grounds: ' + grounds);
         this.setState({
             serving: value,
             grounds: grounds,
-            water: 225 * value
+            water: water
         });
     };
 
     strengthChange(e) {
-        let strength = Math.round(
-            this.state.water / (e.target.valueAsNumber + 12)
-        );
-        let grounds = this.state.serving * strength;
+        let grounds = Math.round(this.state.water / e.target.valueAsNumber);
+        console.log('grounds: ' + grounds);
+
         this.setState({
-            strength: strength,
+            strength: e.target.valueAsNumber,
             grounds: grounds
         });
     }

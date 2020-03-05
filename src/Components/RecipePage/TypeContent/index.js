@@ -9,9 +9,7 @@ const TypeContent = props => (
             <InnerPadding>
                 <ContainerMin>
                     <Heading>Brewing with {props.type}</Heading>
-                    <Paragraph style={{ maxWidth: '800px' }}>
-                        {props.paragraph}
-                    </Paragraph>
+                    <Paragraph>{props.paragraph}</Paragraph>
                     <Paragraph style={{ color: 'black' }}>
                         Flavor types: <span>{props.flavor1}</span>
                         <span>{props.flavor2}</span>
